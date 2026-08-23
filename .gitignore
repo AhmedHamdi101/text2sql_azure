@@ -1,0 +1,49 @@
+# Generated experiment artifacts
+outputs/
+dry_run_outputs/
+logs/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+**/API_KEY
+**/*credential*.json
+*.pem
+*.key
+
+# Python caches, environments, and test artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+
+# Scheduler and runtime logs
+slurm-*.out
+slurm-*.err
+*.log
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*~
+*.swp
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak

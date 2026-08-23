@@ -1,0 +1,19 @@
+gpt-5-5-amr
+  → GPT-5.5
+  → GlobalStandard
+
+gpt-5-4-mini-amr
+  → GPT-5.4-mini
+  → GlobalBatch
+
+gpt-5-4-amr
+  → GPT-5.4
+  → GlobalBatch
+
+claude-opus-4-8-amr
+  → Claude Opus 4.8
+  → GlobalStandard
+
+claude-sonnet-4-6-amr
+  → Claude Sonnet 4.6
+  → GlobalStandard

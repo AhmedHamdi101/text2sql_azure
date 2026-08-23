@@ -1,0 +1,4402 @@
+[
+  {
+    "query_index": 0,
+    "query": "Provide information (including info caches, and security groups) about VMs running on physical host star-76.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#arista_provisioned_vms"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_compute_nodes"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#cisco_hosting_devices"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#instances"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#ml2_dvr_port_bindings",
+        "csail_stata_neutron#sep#lbaas_pools",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#shadow_block_device_mapping"
+      ]
+    }
+  },
+  {
+    "query_index": 1,
+    "query": "Provide information about groups that user with id ccbbd0bdf0104ea68a37483b13b14be2 belongs to.",
+    "top_k_predictions": {
+      "1": [
+        "keystone#sep#user_group_membership"
+      ],
+      "3": [
+        "keystone#sep#user_group_membership",
+        "csail_stata_neutron#sep#default_security_group",
+        "keystone#sep#group"
+      ],
+      "5": [
+        "keystone#sep#user_group_membership",
+        "csail_stata_neutron#sep#default_security_group",
+        "keystone#sep#group",
+        "csail_stata_nova#sep#security_group_rules",
+        "csail_stata_nova#sep#instance_group_member"
+      ],
+      "10": [
+        "keystone#sep#user_group_membership",
+        "csail_stata_neutron#sep#default_security_group",
+        "keystone#sep#group",
+        "csail_stata_nova#sep#security_group_rules",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#shadow_security_group_rules",
+        "keystone#sep#credential"
+      ],
+      "15": [
+        "keystone#sep#user_group_membership",
+        "csail_stata_neutron#sep#default_security_group",
+        "keystone#sep#group",
+        "csail_stata_nova#sep#security_group_rules",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#shadow_security_group_rules",
+        "keystone#sep#credential",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_nova#sep#security_groups",
+        "csail_stata_nova#sep#instance_group_policy",
+        "csail_stata_neutron#sep#securitygrouprules",
+        "csail_stata_nova#sep#shadow_instance_group_policy"
+      ]
+    }
+  },
+  {
+    "query_index": 2,
+    "query": "Provide information about floating IP associated with fixed address 10.77.55.40/8 on fixed port 6450a4fa-accf-43f6-a664-b0b5ad7637df.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#floatingips"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_nova#sep#floating_ips",
+        "csail_stata_neutron#sep#ipallocations"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_nova#sep#floating_ips",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_nova#sep#shadow_floating_ips",
+        "csail_stata_neutron#sep#allowedaddresspairs"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_nova#sep#floating_ips",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_nova#sep#shadow_floating_ips",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ports"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_nova#sep#floating_ips",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_nova#sep#shadow_floating_ips",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#bgp_speakers",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ml2_port_binding_levels"
+      ]
+    }
+  },
+  {
+    "query_index": 3,
+    "query": "Provide information (including extra data) about VMs assigned to the physical host cosmo3-23.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#arista_provisioned_vms"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#cisco_hosting_devices"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_instances"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_neutron#sep#ml2_vlan_allocations",
+        "csail_stata_neutron#sep#cisco_ml2_n1kv_vlan_allocations",
+        "csail_stata_nova#sep#shadow_fixed_ips"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_neutron#sep#ml2_vlan_allocations",
+        "csail_stata_neutron#sep#cisco_ml2_n1kv_vlan_allocations",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_nova#sep#shadow_block_device_mapping",
+        "csail_stata_nova#sep#instance_info_caches",
+        "keystone#sep#service",
+        "csail_stata_nova#sep#shadow_pci_devices"
+      ]
+    }
+  },
+  {
+    "query_index": 4,
+    "query": "Provide information about migrations associated with VM that moves to or from the physical host cosmo3-23.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#shadow_migrations"
+      ],
+      "3": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes"
+      ],
+      "5": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances"
+      ],
+      "10": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#shadow_block_device_mapping",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_cinder#sep#transfers",
+        "csail_stata_neutron#sep#cisco_hosting_devices"
+      ],
+      "15": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#shadow_block_device_mapping",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_cinder#sep#transfers",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#block_device_mapping",
+        "csail_stata_nova#sep#shadow_instance_extra",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#shadow_compute_nodes"
+      ]
+    }
+  },
+  {
+    "query_index": 5,
+    "query": "Provide information (including extra data) about VMs assigned to the physical host glyph1-33.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#arista_provisioned_vms"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_fixed_ips"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#compute_nodes"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#ml2_geneve_endpoints",
+        "csail_stata_nova#sep#instances"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#ml2_geneve_endpoints",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_neutron#sep#ml2_dvr_port_bindings",
+        "csail_stata_neutron#sep#ml2_vlan_allocations",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "keystone#sep#service"
+      ]
+    }
+  },
+  {
+    "query_index": 6,
+    "query": "Provide information (including info caches, and security groups) about VMs on the physical host galax4-70 that have not yet been cleaned up.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#fixed_ips"
+      ],
+      "3": [
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#arista_provisioned_vms"
+      ],
+      "5": [
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#compute_nodes"
+      ],
+      "10": [
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_neutron#sep#quotausages",
+        "csail_stata_nova#sep#aggregate_hosts",
+        "csail_stata_glance#sep#images"
+      ],
+      "15": [
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_neutron#sep#quotausages",
+        "csail_stata_nova#sep#aggregate_hosts",
+        "csail_stata_glance#sep#images",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#shadow_services",
+        "csail_stata_nova#sep#shadow_instance_info_caches"
+      ]
+    }
+  },
+  {
+    "query_index": 7,
+    "query": "Provide information about resource reservation expiring before 2024-05-10 15:07:36.855290.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#reservations"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#reservations",
+        "csail_stata_cinder#sep#reservations",
+        "csail_stata_neutron#sep#quotas"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#reservations",
+        "csail_stata_cinder#sep#reservations",
+        "csail_stata_neutron#sep#quotas",
+        "csail_stata_nova#sep#reservations",
+        "csail_stata_neutron#sep#resourcedeltas"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#reservations",
+        "csail_stata_cinder#sep#reservations",
+        "csail_stata_neutron#sep#quotas",
+        "csail_stata_nova#sep#reservations",
+        "csail_stata_neutron#sep#resourcedeltas",
+        "csail_stata_nova#sep#shadow_reservations",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_nova#sep#quota_usages",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#standardattributes"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#reservations",
+        "csail_stata_cinder#sep#reservations",
+        "csail_stata_neutron#sep#quotas",
+        "csail_stata_nova#sep#reservations",
+        "csail_stata_neutron#sep#resourcedeltas",
+        "csail_stata_nova#sep#shadow_reservations",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_nova#sep#quota_usages",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#standardattributes",
+        "csail_stata_cinder#sep#quota_usages",
+        "csail_stata_neutron#sep#quotausages",
+        "csail_stata_glance#sep#metadef_resource_types",
+        "keystone#sep#trust",
+        "csail_stata_cinder#sep#quotas"
+      ]
+    }
+  },
+  {
+    "query_index": 8,
+    "query": "Provide information about the port with ip address 10.115.70.43/8 under network 0a1d0a27-cffa-4de3-92c5-9d3fd3f2e74d.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#ipallocations"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#portsecuritybindings"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#floatingips"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#vips"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#extradhcpopts",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#members"
+      ]
+    }
+  },
+  {
+    "query_index": 9,
+    "query": "Provide information about the port with ip address 10.145.219.202/8 under network 0a1d0a27-cffa-4de3-92c5-9d3fd3f2e74d.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#ipallocations"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#portsecuritybindings"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#routerports"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#vips"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#extradhcpopts",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#ml2_port_binding_levels"
+      ]
+    }
+  },
+  {
+    "query_index": 10,
+    "query": "Provide password information about the local user with id ccbbd0bdf0104ea68a37483b13b14be2.",
+    "top_k_predictions": {
+      "1": [
+        "keystone#sep#password"
+      ],
+      "3": [
+        "keystone#sep#password",
+        "keystone#sep#local_user",
+        "csail_stata_neutron#sep#default_security_group"
+      ],
+      "5": [
+        "keystone#sep#password",
+        "keystone#sep#local_user",
+        "csail_stata_neutron#sep#default_security_group",
+        "keystone#sep#user_group_membership",
+        "csail_stata_neutron#sep#networkrbacs"
+      ],
+      "10": [
+        "keystone#sep#password",
+        "keystone#sep#local_user",
+        "csail_stata_neutron#sep#default_security_group",
+        "keystone#sep#user_group_membership",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#key_pairs",
+        "keystone#sep#credential",
+        "keystone#sep#user",
+        "csail_stata_nova#sep#shadow_key_pairs"
+      ],
+      "15": [
+        "keystone#sep#password",
+        "keystone#sep#local_user",
+        "csail_stata_neutron#sep#default_security_group",
+        "keystone#sep#user_group_membership",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#key_pairs",
+        "keystone#sep#credential",
+        "keystone#sep#user",
+        "csail_stata_nova#sep#shadow_key_pairs",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#bgp_peers",
+        "csail_stata_nova#sep#console_pools",
+        "csail_stata_nova#sep#shadow_fixed_ips"
+      ]
+    }
+  },
+  {
+    "query_index": 11,
+    "query": "Provide information (including extra data) about VMs assigned to the physical host blaze8-12.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#arista_provisioned_vms"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#fixed_ips"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#ml2_vlan_allocations"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#ml2_vlan_allocations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#shadow_fixed_ips"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#ml2_vlan_allocations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#services",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_nova#sep#aggregate_hosts"
+      ]
+    }
+  },
+  {
+    "query_index": 12,
+    "query": "Provide information about port with device id 35620978-cabd-48bd-b7f2-58fb700ffbfd owned by project 3a3dd8971d2e4f6abf826e5dd0362895.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#portsecuritybindings"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#networksecuritybindings"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#ml2_port_binding_levels"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#lbaas_members"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#resourcedeltas",
+        "csail_stata_neutron#sep#nsxv_port_index_mappings"
+      ]
+    }
+  },
+  {
+    "query_index": 13,
+    "query": "Provide information about user with id ccbbd0bdf0104ea68a37483b13b14be2.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#networkrbacs"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#networkrbacs",
+        "keystone#sep#user_group_membership",
+        "csail_stata_nova#sep#instance_id_mappings"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#networkrbacs",
+        "keystone#sep#user_group_membership",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#key_pairs",
+        "csail_stata_nova#sep#instance_faults"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#networkrbacs",
+        "keystone#sep#user_group_membership",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#key_pairs",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_neutron#sep#members"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#networkrbacs",
+        "keystone#sep#user_group_membership",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#key_pairs",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_neutron#sep#members",
+        "keystone#sep#credential",
+        "keystone#sep#trust",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_neutron#sep#default_security_group",
+        "keystone#sep#user"
+      ]
+    }
+  },
+  {
+    "query_index": 14,
+    "query": "Provide information (including info caches, and security groups) about VMs on the physical host astro-92 that have not yet been cleaned up.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#fixed_ips"
+      ],
+      "3": [
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#shadow_instances"
+      ],
+      "5": [
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#instance_info_caches"
+      ],
+      "10": [
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#pci_devices",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#quotausages",
+        "csail_stata_glance#sep#images"
+      ],
+      "15": [
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#pci_devices",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#quotausages",
+        "csail_stata_glance#sep#images",
+        "csail_stata_nova#sep#aggregate_hosts",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_nova#sep#block_device_mapping",
+        "csail_stata_nova#sep#shadow_block_device_mapping",
+        "csail_stata_neutron#sep#cisco_hosting_devices"
+      ]
+    }
+  },
+  {
+    "query_index": 15,
+    "query": "Provide information about port with device id 61389439-cf52-4a9c-9185-08f0f24f644e owned by project 347e25c219354db38c6662e4ab9a9c84.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#portsecuritybindings"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ml2_port_binding_levels"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#networksecuritybindings"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#resourcedeltas"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#resourcedeltas",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#nsxv_port_index_mappings"
+      ]
+    }
+  },
+  {
+    "query_index": 16,
+    "query": "Provide information about subnet access control for subnet e8da8ec5-364b-4a31-afaf-f68a206b7846.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#subnets"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnetroutes"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#networkdhcpagentbindings"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#securitygrouprules",
+        "csail_stata_neutron#sep#ports"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#securitygrouprules",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#nuage_subnet_l2dom_mapping",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#routerports"
+      ]
+    }
+  },
+  {
+    "query_index": 17,
+    "query": "Provide information about migrations associated with VM that moves to or from the physical host streak-26.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#shadow_migrations"
+      ],
+      "3": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#migrations"
+      ],
+      "5": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#compute_nodes"
+      ],
+      "10": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#ml2_network_segments",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_glance#sep#migrate_version"
+      ],
+      "15": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#ml2_network_segments",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_glance#sep#migrate_version",
+        "csail_stata_neutron#sep#cisco_ml2_nexusport_bindings",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#aggregate_hosts"
+      ]
+    }
+  },
+  {
+    "query_index": 18,
+    "query": "Provide information about publicly available networks owned by project 9f13bf11e06e4d81b44c8c3e62d4362b.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#networks"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_nova#sep#networks"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_nova#sep#networks",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#floatingips"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_nova#sep#networks",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#ipavailabilityranges"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_nova#sep#networks",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#router_extra_attributes",
+        "csail_stata_neutron#sep#cisco_ml2_n1kv_network_bindings",
+        "csail_stata_nova#sep#floating_ips",
+        "csail_stata_cinder#sep#quotas",
+        "csail_stata_neutron#sep#ipallocations"
+      ]
+    }
+  },
+  {
+    "query_index": 19,
+    "query": "Provide information about subnet access control for subnet 9ce2600b-6566-4c81-9370-9b758d5f7ccc.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipavailabilityranges"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#nuage_subnet_l2dom_mapping",
+        "csail_stata_neutron#sep#subnetpoolprefixes"
+      ]
+    }
+  },
+  {
+    "query_index": 20,
+    "query": "Provide information (including info caches, and security groups) for these VMs d6e79a50-82c0-49be-9967-2d5da9c87001, 003c6f3d-6c4c-40dc-840b-81feb6360e31, 7fbac52f-3ee5-4c38-a25a-c52ac39c8bb7, ade24b16-e170-4c2f-a8bd-e0b3ef60a87d, 6fed903f-e4e5-415c-a41c-fc50bdde11de, e1820f1d-ef1b-4155-83fc-b5c9d782a67a, eb216147-8e56-4b6b-99cf-bd6436fd65bb, 5395b5fb-4d3e-4606-9ac4-145431f1fe93, 62e96b06-461a-4cf0-b9d5-80b981760c26.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#securitygroupportbindings"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#default_security_group"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#securitygroups"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#securitygroups",
+        "keystone#sep#user_group_membership",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#sessionpersistences",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_nova#sep#instances"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#securitygroups",
+        "keystone#sep#user_group_membership",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#sessionpersistences",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#shadow_security_group_rules",
+        "csail_stata_neutron#sep#pools"
+      ]
+    }
+  },
+  {
+    "query_index": 21,
+    "query": "Provide information about migrations associated with VM that moves to or from the physical host drive-59.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#shadow_migrations"
+      ],
+      "3": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes"
+      ],
+      "5": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#instances"
+      ],
+      "10": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#block_device_mapping",
+        "csail_stata_nova#sep#shadow_compute_nodes"
+      ],
+      "15": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#block_device_mapping",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_cinder#sep#transfers",
+        "csail_stata_nova#sep#shadow_block_device_mapping",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_glance#sep#migrate_version",
+        "csail_stata_neutron#sep#cisco_hosting_devices"
+      ]
+    }
+  },
+  {
+    "query_index": 22,
+    "query": "Provide information (including info caches, and security groups) for these VMs 1453d6b3-d1a0-4649-8ac8-38f60beabb2b, 0c97d219-2dfc-4689-ad7f-fe3758d91a9e, 325b4e2d-ba54-4728-b2ed-af638cecb8cc, c2873331-af43-4ac9-82d6-d5547ecd15fa, e8202c21-082f-4182-a255-ad8e5de7932e, 26ad4e9b-215e-4b27-8718-1033f7a54c8e, 1f863dd8-76d3-4671-9b18-af456d1b2e1d, 5e028bfa-d3bd-4acd-8e7b-b293bc780814, 9480f48c-36a1-4885-9429-2d65d35f0031, 3307d967-b1cf-4c6f-b438-5fc0a8029488, 6341e0f8-9418-49e1-9f30-a7aa139f2c7b, 06758786-89b1-405e-ba26-00392864c06d, 1ab25e55-cdb4-44ae-84b9-e74b961cd463, 75ee7199-c9b6-45c9-9500-70566ec64969, 6036acdf-8118-4e8d-a98c-4cf6d4fc64c2, 4f3171be-cf1c-4a59-a3c0-8694461379f5, 514e9993-7b63-4984-a1af-8c6e33171b62, 07094c45-97cc-45a2-aef2-738a7d96a9ef, f050072f-dfba-40d6-8506-aece1c265508, c23b80b0-4d2f-4b29-8b67-9302b59bff29, 4bfb5507-31f3-4a5c-811c-996eef9b742a, 259f6b6c-8661-49a4-b171-e836f7bfd9de, 5e50080b-00a5-4df1-add3-065e69e647d6.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#securitygroupportbindings"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroups"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#portsecuritybindings"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#shadow_instance_faults"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_neutron#sep#securitygrouprules",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#ipallocations",
+        "keystone#sep#trust_role",
+        "csail_stata_neutron#sep#sessionpersistences"
+      ]
+    }
+  },
+  {
+    "query_index": 23,
+    "query": "Provide information about the port with ip address 10.174.127.149/8 under network 0a1d0a27-cffa-4de3-92c5-9d3fd3f2e74d.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#ipallocations"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#routerports"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#floatingips"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#vips"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#extradhcpopts",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#members"
+      ]
+    }
+  },
+  {
+    "query_index": 24,
+    "query": "Provide information about network access control for network b3d6c27a-a9bb-4521-b5de-4d65eb7490dc.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#routerports"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#networksecuritybindings"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#routerl3agentbindings"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#lbaas_pools",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes"
+      ]
+    }
+  },
+  {
+    "query_index": 25,
+    "query": "Provide information about physical host blitz1-32.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#lbaas_members"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_cinder#sep#iscsi_targets",
+        "csail_stata_neutron#sep#lbaas_pools"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_cinder#sep#iscsi_targets",
+        "csail_stata_neutron#sep#lbaas_pools",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_neutron#sep#ml2_port_bindings"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_cinder#sep#iscsi_targets",
+        "csail_stata_neutron#sep#lbaas_pools",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#ml2_vlan_allocations",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#routers",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_nova#sep#aggregate_hosts"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_cinder#sep#iscsi_targets",
+        "csail_stata_neutron#sep#lbaas_pools",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#ml2_vlan_allocations",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#routers",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_nova#sep#aggregate_hosts",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#quotas",
+        "csail_stata_neutron#sep#subnetroutes"
+      ]
+    }
+  },
+  {
+    "query_index": 26,
+    "query": "Provide information (including info caches, and security groups) about VMs running on physical host flash-9.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#fixed_ips"
+      ],
+      "3": [
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#instances"
+      ],
+      "5": [
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#shadow_fixed_ips"
+      ],
+      "10": [
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_nova#sep#shadow_pci_devices",
+        "csail_stata_nova#sep#pci_devices",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#compute_nodes"
+      ],
+      "15": [
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_nova#sep#shadow_pci_devices",
+        "csail_stata_nova#sep#pci_devices",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#floating_ips",
+        "csail_stata_nova#sep#block_device_mapping",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#shadow_block_device_mapping"
+      ]
+    }
+  },
+  {
+    "query_index": 27,
+    "query": "Provide information about publicly available subnets owned by tenant 9f13bf11e06e4d81b44c8c3e62d4362b.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#networkrbacs"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#ha_router_networks"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#ha_router_networks",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#arista_provisioned_nets",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#auto_allocated_topologies",
+        "csail_stata_neutron#sep#meteringlabels"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#ha_router_networks",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#arista_provisioned_nets",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#auto_allocated_topologies",
+        "csail_stata_neutron#sep#meteringlabels",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#address_scopes",
+        "csail_stata_neutron#sep#quotausages"
+      ]
+    }
+  },
+  {
+    "query_index": 28,
+    "query": "Provide information about the loadbalancer with id 0367b35b-023b-41d5-816b-359b3bcbdd8e.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#lbaas_loadbalanceragentbindings"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#lbaas_loadbalanceragentbindings",
+        "csail_stata_neutron#sep#lbaas_loadbalancer_statistics",
+        "csail_stata_neutron#sep#lbaas_loadbalancers"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#lbaas_loadbalanceragentbindings",
+        "csail_stata_neutron#sep#lbaas_loadbalancer_statistics",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_neutron#sep#lbaas_pools",
+        "csail_stata_neutron#sep#routerl3agentbindings"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#lbaas_loadbalanceragentbindings",
+        "csail_stata_neutron#sep#lbaas_loadbalancer_statistics",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_neutron#sep#lbaas_pools",
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#poolloadbalanceragentbindings",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_neutron#sep#lbaas_listeners"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#lbaas_loadbalanceragentbindings",
+        "csail_stata_neutron#sep#lbaas_loadbalancer_statistics",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_neutron#sep#lbaas_pools",
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#poolloadbalanceragentbindings",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_neutron#sep#lbaas_listeners",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#providerresourceassociations"
+      ]
+    }
+  },
+  {
+    "query_index": 29,
+    "query": "Provide information (including info caches, and security groups) for these VMs dae33792-fddf-4ef1-b06f-aca2d8cf90e2, 69d29554-8111-49e9-9033-4790700fac35, 85bdf307-26d3-490d-83c4-b3c803bbe12e, 6e2ca95e-a9bc-4426-a7ea-6de5c75d1fe6, d29c6a18-68a1-4f80-8962-e6be76be155b, 5634b187-fac9-47e3-8452-00d4c180a135, 6a4653b2-60cc-4085-b5d6-d3a90d8a099d, bd6a9e8f-8652-498f-b7aa-027f2f40c60d, 234b3669-30a2-432e-a906-b4c747cea3e7, b67262b4-644c-48b5-9c33-ed968f60cd77, 2eaa5fee-b472-46b0-a79a-9df601646581, a878223b-7b58-4fcb-a027-a00063d40e32, 7393f4d3-e6e5-4cb7-9380-eda551372018, 991b0946-6377-41c3-b4ad-16880d24416f, 96c76788-8d28-42d0-8765-44d9990d3152, 5c1881f2-face-4e2a-aa92-17d9848f2a96, f1af17d9-bdb7-4fea-9772-182301b87c1d, 7760956b-c1e4-440b-8ba3-676896f4441a, f3e6a1db-6733-45fb-9ff5-53b760b020ff, 9fbdb8d9-e3b3-40ae-9e97-915981107caf, f78b9615-5abe-4249-9da0-e0b58821cc61, 50d909da-5a4b-4c20-af67-fe2d6362b7a3.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#securitygroupportbindings"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#default_security_group"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#ipavailabilityranges"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_neutron#sep#securitygrouprules"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_neutron#sep#securitygrouprules",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#quotas",
+        "keystone#sep#user_group_membership",
+        "csail_stata_nova#sep#shadow_virtual_interfaces"
+      ]
+    }
+  },
+  {
+    "query_index": 30,
+    "query": "Provide information (including info caches, and security groups) for these VMs caeefb11-d678-46c5-b240-639688fff42e, 20fe7a2a-f2c0-4d9a-af3f-2d836fd35f3c, d68d2937-511a-4f89-8a4d-a3f114781e1a, 337d64cd-2daf-488a-b74b-5eddf97462db, 2e078448-351f-419b-adca-12b644fa6d2c, 2e35f274-5b4a-4cba-9cfe-0786c0a90906, 234fd9ec-1375-46bd-969a-237fc46eadc4, f14b5d3f-1c42-40b1-a48b-6baeba62c889, 6f2b0902-4667-4daa-b8dc-42cac14ab9e5, 29c9a596-a557-4ff7-abd6-a985bdc39be0, 8c691810-dfd5-44d8-ae8e-0ffba13bde47, b9eb36ee-3afc-40c0-a6b4-5f9ed2e41e8e, cd27ab83-30a2-4be8-942f-a3ee124dc4e4.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#securitygroupportbindings"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#default_security_group"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipavailabilityranges"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#shadow_instances"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#securitygrouprules",
+        "keystone#sep#service",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_neutron#sep#pools",
+        "keystone#sep#user_group_membership"
+      ]
+    }
+  },
+  {
+    "query_index": 31,
+    "query": "Provide information (including info caches, security groups, system metadata, and extra data) about the instance with id 36cc0a85-c3ef-4ed4-8883-369c87aa96e9.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#shadow_instance_faults"
+      ],
+      "3": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults"
+      ],
+      "5": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#instance_metadata"
+      ],
+      "10": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#shadow_virtual_interfaces"
+      ],
+      "15": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#shadow_virtual_interfaces",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#shadow_instance_metadata",
+        "csail_stata_nova#sep#shadow_instance_group_member"
+      ]
+    }
+  },
+  {
+    "query_index": 32,
+    "query": "Provide information (including info caches, and security groups) for these VMs 9aebab6b-08f0-4000-8573-a7b71b45d582, 1262ae40-d640-412d-8e61-842b5ed13b1e, 11e66ab0-5bfe-4863-85f6-b95596d8e649, 4ddffb34-bf5a-45e9-970e-a0d34272bea5, 9314873f-2e06-4f8e-a65c-d47198625763, a60f0841-84ba-4345-aa3a-cbea12a8ae11, e8e97077-88c0-4d4d-b55d-ae46f89353bb, d32a5f25-b746-4ff7-8709-087d0505d952, 2d1cfb18-913f-4754-b077-f96de1742b62, dc6a6cc8-c40e-4d5d-8bcf-5dfc7a0bf7b9, fbfcb130-e760-42f5-93d1-f9e93f9a51e4, 455124fd-f958-448b-b325-d3bda5887196, 87fe155b-466c-4237-8a53-c239721a6466, 804e87ae-6539-4151-9360-f77f99a89622.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#securitygroupportbindings"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#securitygroups"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_nova#sep#shadow_virtual_interfaces",
+        "csail_stata_nova#sep#instances"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_nova#sep#shadow_virtual_interfaces",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "keystone#sep#trust_role",
+        "csail_stata_neutron#sep#securitygrouprules",
+        "csail_stata_nova#sep#fixed_ips"
+      ]
+    }
+  },
+  {
+    "query_index": 33,
+    "query": "Provide information about migrations associated with VM that moves to or from the physical host astro-92.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#migrations"
+      ],
+      "3": [
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#compute_nodes"
+      ],
+      "5": [
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances"
+      ],
+      "10": [
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#block_device_mapping",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_block_device_mapping"
+      ],
+      "15": [
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#block_device_mapping",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_block_device_mapping",
+        "csail_stata_cinder#sep#transfers",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_cinder#sep#volumes"
+      ]
+    }
+  },
+  {
+    "query_index": 34,
+    "query": "Provide information (including info caches, and security groups) about VMs running on physical host drive-59.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#shadow_compute_nodes"
+      ],
+      "3": [
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#compute_nodes"
+      ],
+      "5": [
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#fixed_ips"
+      ],
+      "10": [
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#securitygroups"
+      ],
+      "15": [
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_neutron#sep#lbaas_pools",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_cinder#sep#volumes"
+      ]
+    }
+  },
+  {
+    "query_index": 35,
+    "query": "Provide information about physical host astro-92.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#ml2_gre_endpoints"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#lbaas_members"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#cisco_hosting_devices"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#lbaas_pools",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#aggregate_hosts",
+        "csail_stata_nova#sep#compute_nodes"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#lbaas_pools",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#aggregate_hosts",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#lbaas_listeners",
+        "csail_stata_neutron#sep#cisco_ml2_apic_host_links",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_neutron#sep#lbaas_loadbalancers"
+      ]
+    }
+  },
+  {
+    "query_index": 36,
+    "query": "Provide information about migrations associated with VM that moves to or from the physical host axis-11.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#shadow_migrations"
+      ],
+      "3": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes"
+      ],
+      "5": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances"
+      ],
+      "10": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_block_device_mapping",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#block_device_mapping"
+      ],
+      "15": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_block_device_mapping",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#block_device_mapping",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#shadow_instance_extra",
+        "csail_stata_neutron#sep#cisco_hosting_devices"
+      ]
+    }
+  },
+  {
+    "query_index": 37,
+    "query": "Provide information (including info caches, and security groups) for these VMs f5a08397-5aac-44b4-b359-f03ff6ce228a, e7c1acd1-6a47-4a08-8601-5022d4d50aa7, e8579caf-bb8c-4fa2-ba55-6d9a7cbc4d9e, 80822713-5422-43ec-8127-0513708ad73b, acdf87ab-5ddc-4dba-bca0-71dccef3200d, 3d471303-557b-4a65-a5bd-1ca14dc2e445, 02601559-9715-4538-9c93-11ba1134a8d5, 0b79659e-7fbf-45e8-b0d0-65fa8e7eba3f, fd598c1c-3015-4a21-a2a4-141b89929548, f4d4c3c7-b173-45c9-bd8c-5558fe16a2f9, 5e918753-4136-4621-8c64-a5060d4176c5, bb5deaeb-64ff-4422-8fc2-5c9a03fb22a2, befacc64-1165-4e69-aa4b-031e6fc27401, 2b4585b6-a893-4f04-9ba3-e3573f6b0cab, 9594fe52-ebf8-4a89-ab09-4010e77693f5, 829fa62e-31d6-477a-8d66-bb633f02399e, faade932-bb08-4e2c-830b-349238cf2c47, 40cf2ad8-959b-4ec6-afe5-3827206b4a5d, 7a138353-212e-4cb2-a0c8-61f300430395, 4306ca1c-b980-4fb6-a91b-47869b6338c7, 9e1ceb5e-527b-4d08-b44b-bfdc7b63cfa1.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#default_security_group"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#securitygroups"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipavailabilityranges"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#securitygrouprules",
+        "csail_stata_neutron#sep#quotas"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#securitygrouprules",
+        "csail_stata_neutron#sep#quotas",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "keystone#sep#trust_role",
+        "csail_stata_nova#sep#shadow_instance_faults"
+      ]
+    }
+  },
+  {
+    "query_index": 38,
+    "query": "Provide information about the port with ip address 10.165.172.69/8 under network 0a1d0a27-cffa-4de3-92c5-9d3fd3f2e74d.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#ipallocations"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#portsecuritybindings"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#floatingips"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#vips"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#extradhcpopts",
+        "csail_stata_neutron#sep#subnetroutes"
+      ]
+    }
+  },
+  {
+    "query_index": 39,
+    "query": "Provide information about migrations associated with VM that moves to or from the physical host ether-18.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#shadow_migrations"
+      ],
+      "3": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes"
+      ],
+      "5": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances"
+      ],
+      "10": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_cinder#sep#transfers",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_nova#sep#shadow_block_device_mapping"
+      ],
+      "15": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_cinder#sep#transfers",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_nova#sep#shadow_block_device_mapping",
+        "csail_stata_nova#sep#networks",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#agents"
+      ]
+    }
+  },
+  {
+    "query_index": 40,
+    "query": "Provide information about port with device id bb5deaeb-64ff-4422-8fc2-5c9a03fb22a2 owned by project 3be6c8b9f95842198466a9c673404768.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#portsecuritybindings"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#routerports"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_neutron#sep#ports"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#nsxv_port_index_mappings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#allowedaddresspairs"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#nsxv_port_index_mappings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#resourcedeltas",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#extradhcpopts",
+        "csail_stata_neutron#sep#lbaas_members"
+      ]
+    }
+  },
+  {
+    "query_index": 41,
+    "query": "Provide information (including info caches, and security groups) for these VMs 81222ae9-547f-44e8-b988-353a28148392, 0c7dc298-e42a-4b4f-90a7-1980491e7911, 44b77ecc-e279-4ff9-9d8a-c03707037e97, 0f89310d-02ce-48c8-8eac-0a9ff8b9c9e6, aba5e5fe-efa5-4528-b79c-3e3f90848469, 836607c9-9d01-476a-9e4e-80d9e0d9c9aa, 0f3dc79c-c99f-4eea-8c82-492cfa1a6b0b, 5fe5a18c-53d7-4a13-a694-4df57fc3fa17, 01b82e1b-e8a4-47c0-b970-9bf3b9766d78, 4237e158-6f7c-4db2-9962-3efdfbc7b744, c7f1c00c-0dc2-4514-84a6-f5df3425e339, 6869e646-0794-4207-8c16-cd196b535713, 8661f517-cd5c-4562-875c-50c726560027, 428ddc01-e731-4648-9fe1-9fb6f0ba998a, a9970164-959b-485a-ba05-5c184e808af9, a37e21a5-ade5-4eb9-b557-c68d106b1fec, 0513b715-a66d-461b-adf6-15504608f3b6, 208125fc-e3de-4331-a1c2-67bde6cd3167, 23fec744-dd61-491b-8baa-4f2bea4d757e.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#securitygroupportbindings"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipavailabilityranges"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "keystone#sep#trust_role"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "keystone#sep#trust_role",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#securitygrouprules",
+        "csail_stata_neutron#sep#quotas",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#providerresourceassociations"
+      ]
+    }
+  },
+  {
+    "query_index": 42,
+    "query": "Provide information (including info caches, security groups, system metadata, and extra data) about the instance with id 6c4faba5-2bba-4286-ad1e-33896559dfc5.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#shadow_instance_faults"
+      ],
+      "3": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults"
+      ],
+      "5": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#instance_groups"
+      ],
+      "10": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#instance_id_mappings"
+      ],
+      "15": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_nova#sep#shadow_virtual_interfaces",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#shadow_instance_group_member",
+        "csail_stata_neutron#sep#default_security_group"
+      ]
+    }
+  },
+  {
+    "query_index": 43,
+    "query": "Provide information about network with id 0a1d0a27-cffa-4de3-92c5-9d3fd3f2e74d.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#networksecuritybindings"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#ipallocations"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#ml2_network_segments",
+        "csail_stata_neutron#sep#nsxv_spoofguard_policy_network_mappings",
+        "csail_stata_neutron#sep#externalnetworks",
+        "csail_stata_neutron#sep#routerports"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#ml2_network_segments",
+        "csail_stata_neutron#sep#nsxv_spoofguard_policy_network_mappings",
+        "csail_stata_neutron#sep#externalnetworks",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#cisco_ml2_n1kv_network_bindings",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#multi_provider_networks",
+        "csail_stata_neutron#sep#routerl3agentbindings"
+      ]
+    }
+  },
+  {
+    "query_index": 44,
+    "query": "Provide information about migrations associated with VM that moves to or from the physical host flux2-19.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#shadow_migrations"
+      ],
+      "3": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#shadow_instances"
+      ],
+      "5": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#instances"
+      ],
+      "10": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips"
+      ],
+      "15": [
+        "csail_stata_nova#sep#shadow_migrations",
+        "csail_stata_nova#sep#migrations",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_cinder#sep#transfers",
+        "csail_stata_neutron#sep#ml2_brocadeports",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#block_device_mapping"
+      ]
+    }
+  },
+  {
+    "query_index": 45,
+    "query": "Provide information about subnet access control for publicly available subnets owned by tenant 9f13bf11e06e4d81b44c8c3e62d4362b.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#networkrbacs"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#vips"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#ha_router_networks",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#arista_provisioned_nets"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#ha_router_networks",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#arista_provisioned_nets",
+        "csail_stata_neutron#sep#auto_allocated_topologies",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#vpnservices",
+        "csail_stata_neutron#sep#lbaas_l7policies",
+        "csail_stata_neutron#sep#address_scopes"
+      ]
+    }
+  },
+  {
+    "query_index": 46,
+    "query": "Provide information (including info caches, and security groups) about the instance with id 85aafec6-1b2e-423a-b834-d4a526068dec.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#shadow_fixed_ips"
+      ],
+      "3": [
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#shadow_instance_faults"
+      ],
+      "5": [
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_id_mappings"
+      ],
+      "10": [
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#instance_info_caches"
+      ],
+      "15": [
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_nova#sep#shadow_instance_group_member",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#security_group_instance_association",
+        "csail_stata_nova#sep#instance_metadata"
+      ]
+    }
+  },
+  {
+    "query_index": 47,
+    "query": "Provide information about port with device id 889a69b3-b9bc-4c0e-8e07-b9a19251b507 owned by project e3fb2659584e436a832461dac02835f0.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#portsecuritybindings"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ml2_port_binding_levels"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#lbaas_members"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#vips"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#resourcedeltas",
+        "csail_stata_neutron#sep#members"
+      ]
+    }
+  },
+  {
+    "query_index": 48,
+    "query": "Provide information (including extra data) about VMs assigned to the physical host flux2-19.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#arista_provisioned_vms"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#cisco_hosting_devices"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#ml2_vlan_allocations",
+        "csail_stata_nova#sep#shadow_instances"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#ml2_vlan_allocations",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#shadow_fixed_ips"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#ml2_vlan_allocations",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#lbaas_loadbalancers",
+        "csail_stata_neutron#sep#ml2_gre_endpoints",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#ml2_geneve_endpoints",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#pools"
+      ]
+    }
+  },
+  {
+    "query_index": 49,
+    "query": "Provide information about federated user with name prime_helix.306sonic.",
+    "top_k_predictions": {
+      "1": [
+        "keystone#sep#local_user"
+      ],
+      "3": [
+        "keystone#sep#local_user",
+        "csail_stata_nova#sep#key_pairs",
+        "csail_stata_nova#sep#shadow_instances"
+      ],
+      "5": [
+        "keystone#sep#local_user",
+        "csail_stata_nova#sep#key_pairs",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#providerresourceassociations"
+      ],
+      "10": [
+        "keystone#sep#local_user",
+        "csail_stata_nova#sep#key_pairs",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#securitygroups"
+      ],
+      "15": [
+        "keystone#sep#local_user",
+        "csail_stata_nova#sep#key_pairs",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#ml2_port_bindings",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#ml2_port_binding_levels",
+        "csail_stata_nova#sep#shadow_fixed_ips"
+      ]
+    }
+  },
+  {
+    "query_index": 50,
+    "query": "Provide id information about the local user with ID ccbbd0bdf0104ea68a37483b13b14be2.",
+    "top_k_predictions": {
+      "1": [
+        "keystone#sep#user_group_membership"
+      ],
+      "3": [
+        "keystone#sep#user_group_membership",
+        "keystone#sep#local_user",
+        "csail_stata_neutron#sep#networkrbacs"
+      ],
+      "5": [
+        "keystone#sep#user_group_membership",
+        "keystone#sep#local_user",
+        "csail_stata_neutron#sep#networkrbacs",
+        "keystone#sep#password",
+        "csail_stata_nova#sep#instance_id_mappings"
+      ],
+      "10": [
+        "keystone#sep#user_group_membership",
+        "keystone#sep#local_user",
+        "csail_stata_neutron#sep#networkrbacs",
+        "keystone#sep#password",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_nova#sep#key_pairs"
+      ],
+      "15": [
+        "keystone#sep#user_group_membership",
+        "keystone#sep#local_user",
+        "csail_stata_neutron#sep#networkrbacs",
+        "keystone#sep#password",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_nova#sep#key_pairs",
+        "keystone#sep#user",
+        "keystone#sep#credential",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_neutron#sep#ipavailabilityranges"
+      ]
+    }
+  },
+  {
+    "query_index": 51,
+    "query": "Provide information (including security groups, system metadata, extra data, metadata, and info caches) about instance with id 8d3a0be4-dd7b-4f5b-b19f-308e92597462.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#instance_system_metadata"
+      ],
+      "3": [
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_metadata"
+      ],
+      "5": [
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_fixed_ips"
+      ],
+      "10": [
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_nova#sep#fixed_ips"
+      ],
+      "15": [
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_info_caches",
+        "keystone#sep#credential",
+        "csail_stata_nova#sep#shadow_instance_system_metadata",
+        "csail_stata_nova#sep#shadow_virtual_interfaces"
+      ]
+    }
+  },
+  {
+    "query_index": 52,
+    "query": "Provide information about network access control for networks under tenants 9f13bf11e06e4d81b44c8c3e62d4362b.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#ha_router_networks"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#ha_router_networks",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#ha_router_networks",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#arista_provisioned_nets"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#ha_router_networks",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#arista_provisioned_nets",
+        "csail_stata_neutron#sep#auto_allocated_topologies",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#networkconnections",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#lbaas_l7policies"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#ha_router_networks",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#arista_provisioned_nets",
+        "csail_stata_neutron#sep#auto_allocated_topologies",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#networkconnections",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#lbaas_l7policies",
+        "csail_stata_neutron#sep#quotas",
+        "csail_stata_neutron#sep#cisco_ml2_apic_contracts",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#cisco_hosting_devices"
+      ]
+    }
+  },
+  {
+    "query_index": 53,
+    "query": "Provide information about subnet access control for subnets in network 0a1d0a27-cffa-4de3-92c5-9d3fd3f2e74d.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#networks"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#subnetpoolprefixes",
+        "csail_stata_neutron#sep#networkdhcpagentbindings"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#subnetpoolprefixes",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#nuage_subnet_l2dom_mapping",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ports"
+      ]
+    }
+  },
+  {
+    "query_index": 54,
+    "query": "What is the oldest version of the nova-consoleauth service in the cloud?",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#shadow_services"
+      ],
+      "3": [
+        "csail_stata_nova#sep#shadow_services",
+        "csail_stata_nova#sep#shadow_instance_info_caches",
+        "csail_stata_nova#sep#shadow_console_pools"
+      ],
+      "5": [
+        "csail_stata_nova#sep#shadow_services",
+        "csail_stata_nova#sep#shadow_instance_info_caches",
+        "csail_stata_nova#sep#shadow_console_pools",
+        "csail_stata_nova#sep#shadow_consoles",
+        "csail_stata_nova#sep#compute_nodes"
+      ],
+      "10": [
+        "csail_stata_nova#sep#shadow_services",
+        "csail_stata_nova#sep#shadow_instance_info_caches",
+        "csail_stata_nova#sep#shadow_console_pools",
+        "csail_stata_nova#sep#shadow_consoles",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#services",
+        "csail_stata_nova#sep#shadow_instance_extra",
+        "csail_stata_nova#sep#consoles",
+        "csail_stata_nova#sep#instance_info_caches"
+      ],
+      "15": [
+        "csail_stata_nova#sep#shadow_services",
+        "csail_stata_nova#sep#shadow_instance_info_caches",
+        "csail_stata_nova#sep#shadow_console_pools",
+        "csail_stata_nova#sep#shadow_consoles",
+        "csail_stata_nova#sep#compute_nodes",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#services",
+        "csail_stata_nova#sep#shadow_instance_extra",
+        "csail_stata_nova#sep#consoles",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#console_pools",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_nova#sep#shadow_migrations"
+      ]
+    }
+  },
+  {
+    "query_index": 55,
+    "query": "Provide information (including info caches, and security groups) about the VM with uuid baa9bc44-cfd3-40e6-800b-80ffcb15ce97.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#default_security_group"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#shadow_fixed_ips"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#sessionpersistences",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_nova#sep#shadow_virtual_interfaces",
+        "csail_stata_nova#sep#fixed_ips"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#sessionpersistences",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_nova#sep#shadow_virtual_interfaces",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#volume_id_mappings",
+        "keystone#sep#user_group_membership",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_neutron#sep#securitygrouprules",
+        "csail_stata_nova#sep#instances"
+      ]
+    }
+  },
+  {
+    "query_index": 56,
+    "query": "Provide information (including security groups, info caches, extra data, and system metadata) about the instance with UUID 3d471303-557b-4a65-a5bd-1ca14dc2e445.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#instance_faults"
+      ],
+      "3": [
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_id_mappings"
+      ],
+      "5": [
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#shadow_instance_faults"
+      ],
+      "10": [
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_virtual_interfaces"
+      ],
+      "15": [
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_virtual_interfaces",
+        "csail_stata_nova#sep#shadow_instance_metadata",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_info_caches"
+      ]
+    }
+  },
+  {
+    "query_index": 57,
+    "query": "Provide information (including security groups, and info caches) about the instance with UUID 4ed92951-28b6-45bf-8baa-ed939796746e.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#instance_id_mappings"
+      ],
+      "3": [
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults"
+      ],
+      "5": [
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_groups"
+      ],
+      "10": [
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_virtual_interfaces",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#instance_system_metadata"
+      ],
+      "15": [
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_virtual_interfaces",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_nova#sep#security_group_instance_association",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#shadow_instance_metadata"
+      ]
+    }
+  },
+  {
+    "query_index": 58,
+    "query": "Provide information about the 200 latest images that were created at or before 2016-11-28 17:25:32 and have an ID less than cee91088-04a9-4fdf-b2af-a5f2f0889056.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_glance#sep#image_members"
+      ],
+      "3": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#image_tags"
+      ],
+      "5": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#image_tags",
+        "csail_stata_nova#sep#shadow_instance_group_member",
+        "csail_stata_glance#sep#image_properties"
+      ],
+      "10": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#image_tags",
+        "csail_stata_nova#sep#shadow_instance_group_member",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_cinder#sep#image_volume_cache_entries",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_instance_info_caches",
+        "csail_stata_nova#sep#s3_images",
+        "csail_stata_nova#sep#instance_info_caches"
+      ],
+      "15": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#image_tags",
+        "csail_stata_nova#sep#shadow_instance_group_member",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_cinder#sep#image_volume_cache_entries",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_instance_info_caches",
+        "csail_stata_nova#sep#s3_images",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#snapshot_id_mappings",
+        "csail_stata_glance#sep#images",
+        "csail_stata_nova#sep#aggregates",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#shadow_aggregate_hosts"
+      ]
+    }
+  },
+  {
+    "query_index": 59,
+    "query": "Provide information about the 200 latest images.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_glance#sep#image_members"
+      ],
+      "3": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#image_properties"
+      ],
+      "5": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_glance#sep#images",
+        "csail_stata_cinder#sep#image_volume_cache_entries"
+      ],
+      "10": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_glance#sep#images",
+        "csail_stata_cinder#sep#image_volume_cache_entries",
+        "csail_stata_glance#sep#image_tags",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_cinder#sep#snapshots",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#shadow_snapshots"
+      ],
+      "15": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_glance#sep#images",
+        "csail_stata_cinder#sep#image_volume_cache_entries",
+        "csail_stata_glance#sep#image_tags",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_cinder#sep#snapshots",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#shadow_snapshots",
+        "csail_stata_cinder#sep#volume_glance_metadata",
+        "csail_stata_nova#sep#s3_images",
+        "csail_stata_nova#sep#shadow_instance_info_caches",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_cinder#sep#volume_attachment"
+      ]
+    }
+  },
+  {
+    "query_index": 60,
+    "query": "Provide information about the 25 latest images that were created at or before 2022-06-06 17:12:44 and have an ID less than f964c0ae-58d1-49e5-8f2a-67902b86a99c.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_glance#sep#image_tags"
+      ],
+      "3": [
+        "csail_stata_glance#sep#image_tags",
+        "csail_stata_nova#sep#s3_images",
+        "csail_stata_glance#sep#image_members"
+      ],
+      "5": [
+        "csail_stata_glance#sep#image_tags",
+        "csail_stata_nova#sep#s3_images",
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_glance#sep#image_locations"
+      ],
+      "10": [
+        "csail_stata_glance#sep#image_tags",
+        "csail_stata_nova#sep#s3_images",
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_nova#sep#snapshot_id_mappings",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#aggregates",
+        "csail_stata_nova#sep#shadow_instance_info_caches"
+      ],
+      "15": [
+        "csail_stata_glance#sep#image_tags",
+        "csail_stata_nova#sep#s3_images",
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_nova#sep#snapshot_id_mappings",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#aggregates",
+        "csail_stata_nova#sep#shadow_instance_info_caches",
+        "csail_stata_glance#sep#images",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#shadow_aggregate_hosts",
+        "csail_stata_nova#sep#shadow_s3_images",
+        "csail_stata_nova#sep#instance_metadata"
+      ]
+    }
+  },
+  {
+    "query_index": 61,
+    "query": "Provide information (including security groups, info caches, extra data, and metadata) about the 3000 latest instances in the project with id bfd50153a2e9476f93e33e30e922cd06.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#instance_type_projects"
+      ],
+      "3": [
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#shadow_instance_type_projects"
+      ],
+      "5": [
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#shadow_instance_type_projects",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#instance_metadata"
+      ],
+      "10": [
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#shadow_instance_type_projects",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#shadow_instance_groups",
+        "csail_stata_nova#sep#instance_group_member"
+      ],
+      "15": [
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#shadow_instance_type_projects",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#shadow_instance_groups",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#shadow_security_group_instance_association",
+        "csail_stata_nova#sep#security_group_instance_association",
+        "csail_stata_nova#sep#shadow_virtual_interfaces",
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_nova#sep#shadow_instance_group_member"
+      ]
+    }
+  },
+  {
+    "query_index": 62,
+    "query": "Provide information (including security groups, system metadata, info caches, extra data, and associated PCI devices) about the instance d052d786-9b26-4439-ae6b-32a0505fdc12 under project bfd50153a2e9476f93e33e30e922cd06.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#pci_devices"
+      ],
+      "3": [
+        "csail_stata_nova#sep#pci_devices",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_nova#sep#shadow_instance_faults"
+      ],
+      "5": [
+        "csail_stata_nova#sep#pci_devices",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "keystone#sep#credential",
+        "csail_stata_nova#sep#shadow_pci_devices"
+      ],
+      "10": [
+        "csail_stata_nova#sep#pci_devices",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "keystone#sep#credential",
+        "csail_stata_nova#sep#shadow_pci_devices",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#fixed_ips"
+      ],
+      "15": [
+        "csail_stata_nova#sep#pci_devices",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "keystone#sep#credential",
+        "csail_stata_nova#sep#shadow_pci_devices",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_nova#sep#shadow_block_device_mapping",
+        "csail_stata_nova#sep#shadow_instance_system_metadata",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_groups"
+      ]
+    }
+  },
+  {
+    "query_index": 63,
+    "query": "Provide information about the 3000 instance types available to project bfd50153a2e9476f93e33e30e922cd06, sorted in the ascending order flavor id and id.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#instance_type_projects"
+      ],
+      "3": [
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_neutron#sep#flavors",
+        "csail_stata_nova#sep#instance_id_mappings"
+      ],
+      "5": [
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_neutron#sep#flavors",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "keystone#sep#credential",
+        "csail_stata_neutron#sep#flavorserviceprofilebindings"
+      ],
+      "10": [
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_neutron#sep#flavors",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "keystone#sep#credential",
+        "csail_stata_neutron#sep#flavorserviceprofilebindings",
+        "csail_stata_nova#sep#shadow_instance_extra",
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_nova#sep#shadow_instance_type_projects",
+        "csail_stata_nova#sep#shadow_instance_system_metadata",
+        "csail_stata_nova#sep#instance_types"
+      ],
+      "15": [
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_neutron#sep#flavors",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "keystone#sep#credential",
+        "csail_stata_neutron#sep#flavorserviceprofilebindings",
+        "csail_stata_nova#sep#shadow_instance_extra",
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_nova#sep#shadow_instance_type_projects",
+        "csail_stata_nova#sep#shadow_instance_system_metadata",
+        "csail_stata_nova#sep#instance_types",
+        "keystone#sep#service",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_neutron#sep#sessionpersistences",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#shadow_instance_faults"
+      ]
+    }
+  },
+  {
+    "query_index": 64,
+    "query": "Provide information about the host aggregate with id default.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#aggregate_metadata"
+      ],
+      "3": [
+        "csail_stata_nova#sep#aggregate_metadata",
+        "csail_stata_nova#sep#aggregate_hosts",
+        "csail_stata_neutron#sep#networkgateways"
+      ],
+      "5": [
+        "csail_stata_nova#sep#aggregate_metadata",
+        "csail_stata_nova#sep#aggregate_hosts",
+        "csail_stata_neutron#sep#networkgateways",
+        "csail_stata_nova#sep#shadow_aggregate_hosts",
+        "csail_stata_nova#sep#resource_provider_aggregates"
+      ],
+      "10": [
+        "csail_stata_nova#sep#aggregate_metadata",
+        "csail_stata_nova#sep#aggregate_hosts",
+        "csail_stata_neutron#sep#networkgateways",
+        "csail_stata_nova#sep#shadow_aggregate_hosts",
+        "csail_stata_nova#sep#resource_provider_aggregates",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#subnetpools",
+        "csail_stata_nova#sep#shadow_aggregate_metadata",
+        "csail_stata_neutron#sep#externalnetworks",
+        "csail_stata_neutron#sep#qosqueues"
+      ],
+      "15": [
+        "csail_stata_nova#sep#aggregate_metadata",
+        "csail_stata_nova#sep#aggregate_hosts",
+        "csail_stata_neutron#sep#networkgateways",
+        "csail_stata_nova#sep#shadow_aggregate_hosts",
+        "csail_stata_nova#sep#resource_provider_aggregates",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#subnetpools",
+        "csail_stata_nova#sep#shadow_aggregate_metadata",
+        "csail_stata_neutron#sep#externalnetworks",
+        "csail_stata_neutron#sep#qosqueues",
+        "keystone#sep#user",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_nova#sep#aggregates",
+        "csail_stata_neutron#sep#securitygrouprules"
+      ]
+    }
+  },
+  {
+    "query_index": 65,
+    "query": "Provide information about the 3000 instance types, sorted in the ascending order flavor id and id.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#flavors"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#flavors",
+        "csail_stata_nova#sep#shadow_instance_extra",
+        "csail_stata_neutron#sep#flavorserviceprofilebindings"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#flavors",
+        "csail_stata_nova#sep#shadow_instance_extra",
+        "csail_stata_neutron#sep#flavorserviceprofilebindings",
+        "csail_stata_nova#sep#instance_types",
+        "csail_stata_nova#sep#instance_type_projects"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#flavors",
+        "csail_stata_nova#sep#shadow_instance_extra",
+        "csail_stata_neutron#sep#flavorserviceprofilebindings",
+        "csail_stata_nova#sep#instance_types",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#shadow_instance_system_metadata",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#instance_metadata"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#flavors",
+        "csail_stata_nova#sep#shadow_instance_extra",
+        "csail_stata_neutron#sep#flavorserviceprofilebindings",
+        "csail_stata_nova#sep#instance_types",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_extra",
+        "csail_stata_nova#sep#shadow_instance_system_metadata",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#instance_metadata",
+        "keystone#sep#service",
+        "csail_stata_nova#sep#instance_group_member",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#instance_type_extra_specs",
+        "csail_stata_nova#sep#shadow_fixed_ips"
+      ]
+    }
+  },
+  {
+    "query_index": 66,
+    "query": "Provide information (including security groups, and info caches) about the 3000 latest VMs under the project bfd50153a2e9476f93e33e30e922cd06 with void in the name.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#arista_provisioned_vms"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_nova#sep#shadow_pci_devices"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_nova#sep#shadow_pci_devices",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#instance_info_caches"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_nova#sep#shadow_pci_devices",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#pci_devices",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#quotas"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_nova#sep#shadow_pci_devices",
+        "csail_stata_nova#sep#shadow_compute_nodes",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#pci_devices",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#quotas",
+        "csail_stata_cinder#sep#quotas",
+        "csail_stata_nova#sep#security_groups",
+        "csail_stata_nova#sep#shadow_security_groups",
+        "csail_stata_neutron#sep#securitygroupportbindings",
+        "csail_stata_nova#sep#shadow_virtual_interfaces"
+      ]
+    }
+  },
+  {
+    "query_index": 67,
+    "query": "Provide information about the 25 latest public images.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_glance#sep#image_members"
+      ],
+      "3": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#images",
+        "csail_stata_glance#sep#image_locations"
+      ],
+      "5": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#images",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_glance#sep#image_tags"
+      ],
+      "10": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#images",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_glance#sep#image_tags",
+        "csail_stata_cinder#sep#image_volume_cache_entries",
+        "csail_stata_nova#sep#shadow_instance_info_caches",
+        "csail_stata_cinder#sep#snapshots",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#shadow_snapshots"
+      ],
+      "15": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#images",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_glance#sep#image_tags",
+        "csail_stata_cinder#sep#image_volume_cache_entries",
+        "csail_stata_nova#sep#shadow_instance_info_caches",
+        "csail_stata_cinder#sep#snapshots",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#shadow_snapshots",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_nova#sep#shadow_key_pairs",
+        "csail_stata_nova#sep#aggregates",
+        "csail_stata_nova#sep#key_pairs",
+        "csail_stata_nova#sep#s3_images"
+      ]
+    }
+  },
+  {
+    "query_index": 68,
+    "query": "Provide information about the 200 latest images associated with the owner bfd50153a2e9476f93e33e30e922cd06.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_glance#sep#image_members"
+      ],
+      "3": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_cinder#sep#image_volume_cache_entries"
+      ],
+      "5": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_cinder#sep#image_volume_cache_entries",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#images"
+      ],
+      "10": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_cinder#sep#image_volume_cache_entries",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#images",
+        "csail_stata_glance#sep#image_tags",
+        "csail_stata_glance#sep#metadef_namespaces",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#pools"
+      ],
+      "15": [
+        "csail_stata_glance#sep#image_members",
+        "csail_stata_glance#sep#image_properties",
+        "csail_stata_cinder#sep#image_volume_cache_entries",
+        "csail_stata_glance#sep#image_locations",
+        "csail_stata_glance#sep#images",
+        "csail_stata_glance#sep#image_tags",
+        "csail_stata_glance#sep#metadef_namespaces",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#quotas",
+        "csail_stata_nova#sep#s3_images",
+        "csail_stata_neutron#sep#poolmonitorassociations",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_cinder#sep#volumes"
+      ]
+    }
+  },
+  {
+    "query_index": 69,
+    "query": "Provide information (including security groups, system medata, info caches, and metadata) about the instance d052d786-9b26-4439-ae6b-32a0505fdc12 under the project bfd50153a2e9476f93e33e30e922cd06.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#shadow_instance_faults"
+      ],
+      "3": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#instance_groups"
+      ],
+      "5": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#instance_groups",
+        "keystone#sep#credential",
+        "csail_stata_nova#sep#instance_type_projects"
+      ],
+      "10": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#instance_groups",
+        "keystone#sep#credential",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_nova#sep#instance_info_caches"
+      ],
+      "15": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#instance_system_metadata",
+        "csail_stata_nova#sep#instance_groups",
+        "keystone#sep#credential",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_faults",
+        "csail_stata_nova#sep#instance_id_mappings",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_neutron#sep#quotas",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#shadow_virtual_interfaces",
+        "csail_stata_nova#sep#shadow_instance_system_metadata",
+        "csail_stata_nova#sep#instances"
+      ]
+    }
+  },
+  {
+    "query_index": 70,
+    "query": "Provide information about all physical hosts.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#cisco_hosting_devices"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#lbaas_members"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#aggregate_hosts",
+        "csail_stata_neutron#sep#networks"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#aggregate_hosts",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#bgp_speakers",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_neutron#sep#lbaas_pools",
+        "csail_stata_neutron#sep#router_extra_attributes",
+        "csail_stata_neutron#sep#agents"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#cisco_hosting_devices",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#aggregate_hosts",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#bgp_speakers",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_neutron#sep#lbaas_pools",
+        "csail_stata_neutron#sep#router_extra_attributes",
+        "csail_stata_neutron#sep#agents",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#arista_provisioned_vms",
+        "csail_stata_neutron#sep#lbaas_l7policies",
+        "csail_stata_neutron#sep#vips",
+        "csail_stata_neutron#sep#lbaas_loadbalancers"
+      ]
+    }
+  },
+  {
+    "query_index": 71,
+    "query": "Provide information about the 1000 latest volumes under the project bfd50153a2e9476f93e33e30e922cd06.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_cinder#sep#volume_type_projects"
+      ],
+      "3": [
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_cinder#sep#quotas",
+        "csail_stata_cinder#sep#quota_usages"
+      ],
+      "5": [
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_cinder#sep#quotas",
+        "csail_stata_cinder#sep#quota_usages",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_cinder#sep#snapshots"
+      ],
+      "10": [
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_cinder#sep#quotas",
+        "csail_stata_cinder#sep#quota_usages",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_cinder#sep#snapshots",
+        "csail_stata_nova#sep#quota_usages",
+        "csail_stata_cinder#sep#volume_type_extra_specs",
+        "csail_stata_nova#sep#snapshots",
+        "csail_stata_cinder#sep#consistencygroups",
+        "csail_stata_nova#sep#shadow_volume_usage_cache"
+      ],
+      "15": [
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_cinder#sep#quotas",
+        "csail_stata_cinder#sep#quota_usages",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_cinder#sep#snapshots",
+        "csail_stata_nova#sep#quota_usages",
+        "csail_stata_cinder#sep#volume_type_extra_specs",
+        "csail_stata_nova#sep#snapshots",
+        "csail_stata_cinder#sep#consistencygroups",
+        "csail_stata_nova#sep#shadow_volume_usage_cache",
+        "csail_stata_cinder#sep#volume_metadata",
+        "csail_stata_nova#sep#volume_usage_cache",
+        "csail_stata_cinder#sep#volume_attachment",
+        "csail_stata_cinder#sep#volume_types",
+        "csail_stata_cinder#sep#volume_glance_metadata"
+      ]
+    }
+  },
+  {
+    "query_index": 72,
+    "query": "Provide information (including security groups, info caches, extra data, and metadata) about the 3000 latest instances under the project bfd50153a2e9476f93e33e30e922cd06 with light in the name.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_nova#sep#shadow_instance_faults"
+      ],
+      "3": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#shadow_instance_type_projects",
+        "csail_stata_nova#sep#instance_groups"
+      ],
+      "5": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#shadow_instance_type_projects",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#shadow_instance_groups",
+        "csail_stata_nova#sep#instance_type_projects"
+      ],
+      "10": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#shadow_instance_type_projects",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#shadow_instance_groups",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#shadow_instance_info_caches",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#shadow_virtual_interfaces",
+        "csail_stata_nova#sep#shadow_instance_group_member"
+      ],
+      "15": [
+        "csail_stata_nova#sep#shadow_instance_faults",
+        "csail_stata_nova#sep#shadow_instance_type_projects",
+        "csail_stata_nova#sep#instance_groups",
+        "csail_stata_nova#sep#shadow_instance_groups",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_nova#sep#shadow_instance_info_caches",
+        "csail_stata_nova#sep#instance_metadata",
+        "csail_stata_nova#sep#shadow_virtual_interfaces",
+        "csail_stata_nova#sep#shadow_instance_group_member",
+        "csail_stata_nova#sep#shadow_security_group_instance_association",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_nova#sep#shadow_instance_metadata",
+        "csail_stata_nova#sep#shadow_instance_actions",
+        "csail_stata_nova#sep#shadow_reservations"
+      ]
+    }
+  },
+  {
+    "query_index": 73,
+    "query": "Provide information about networks under the project 8333a6a4e59343eda8957cd61da9f0e6.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networkdhcpagentbindings"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networks"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_nova#sep#networks",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_neutron#sep#allowedaddresspairs"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_nova#sep#networks",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#networksecuritybindings"
+      ]
+    }
+  },
+  {
+    "query_index": 74,
+    "query": "Provide information about the 1000 latest volumes under the project 8083447923734c679b261219b815d3bc.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_cinder#sep#volume_type_projects"
+      ],
+      "3": [
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_cinder#sep#quotas",
+        "csail_stata_cinder#sep#quota_usages"
+      ],
+      "5": [
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_cinder#sep#quotas",
+        "csail_stata_cinder#sep#quota_usages",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_cinder#sep#snapshots"
+      ],
+      "10": [
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_cinder#sep#quotas",
+        "csail_stata_cinder#sep#quota_usages",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_cinder#sep#snapshots",
+        "csail_stata_cinder#sep#volume_type_extra_specs",
+        "csail_stata_nova#sep#quota_usages",
+        "csail_stata_cinder#sep#consistencygroups",
+        "csail_stata_cinder#sep#volume_types",
+        "csail_stata_cinder#sep#volume_attachment"
+      ],
+      "15": [
+        "csail_stata_cinder#sep#volume_type_projects",
+        "csail_stata_cinder#sep#quotas",
+        "csail_stata_cinder#sep#quota_usages",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_cinder#sep#snapshots",
+        "csail_stata_cinder#sep#volume_type_extra_specs",
+        "csail_stata_nova#sep#quota_usages",
+        "csail_stata_cinder#sep#consistencygroups",
+        "csail_stata_cinder#sep#volume_types",
+        "csail_stata_cinder#sep#volume_attachment",
+        "csail_stata_nova#sep#volume_id_mappings",
+        "csail_stata_nova#sep#instance_type_projects",
+        "csail_stata_nova#sep#shadow_volume_usage_cache",
+        "csail_stata_nova#sep#snapshots",
+        "csail_stata_nova#sep#volume_usage_cache"
+      ]
+    }
+  },
+  {
+    "query_index": 75,
+    "query": "Provide information about network that include subnet 388ee748-7b3d-4049-99b4-7e582937bbd4.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#subnets"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#routerports"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ipallocations"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#networks"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#nuage_subnet_l2dom_mapping"
+      ]
+    }
+  },
+  {
+    "query_index": 76,
+    "query": "Provide information about network access control for network that includes subnet 76123b94-2ae9-40c4-a4c6-03ee98d081d9.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnets"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#subnetroutes"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ports"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#routers",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#lbaas_members"
+      ]
+    }
+  },
+  {
+    "query_index": 77,
+    "query": "Provide information about subnets associated with network b3d6c27a-a9bb-4521-b5de-4d65eb7490dc.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#ipallocationpools"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#subnetroutes"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#cisco_ml2_n1kv_network_bindings"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#cisco_ml2_n1kv_network_bindings",
+        "csail_stata_neutron#sep#subnetpoolprefixes",
+        "csail_stata_neutron#sep#ml2_network_segments",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#nuage_subnet_l2dom_mapping",
+        "csail_stata_neutron#sep#networks"
+      ]
+    }
+  },
+  {
+    "query_index": 78,
+    "query": "Provide information about subnet access control for subnets in network b3d6c27a-a9bb-4521-b5de-4d65eb7490dc.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#networkdhcpagentbindings"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networkrbacs"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#nuage_subnet_l2dom_mapping",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#allowedaddresspairs"
+      ]
+    }
+  },
+  {
+    "query_index": 79,
+    "query": "Provide information about network access control for network that includes subnet 16eaae8c-1920-4b8b-8765-f149dde8a1a6.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#subnets"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnetroutes"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipallocations"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#nuage_subnet_l2dom_mapping",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#ports"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#nuage_subnet_l2dom_mapping",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#quotas"
+      ]
+    }
+  },
+  {
+    "query_index": 80,
+    "query": "Provide information about network access control for network 0a1d0a27-cffa-4de3-92c5-9d3fd3f2e74d.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#networks"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#allowedaddresspairs"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#router_extra_attributes",
+        "csail_stata_neutron#sep#subnetroutes"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#router_extra_attributes",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#nsxv_spoofguard_policy_network_mappings",
+        "csail_stata_neutron#sep#floatingips"
+      ]
+    }
+  },
+  {
+    "query_index": 81,
+    "query": "Provide information about federated user 945fa0ad0137481cac5ef83a0b94b1b9.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#routerl3agentbindings"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_neutron#sep#floatingips"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#shadow_fixed_ips"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "keystone#sep#user_group_membership",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_neutron#sep#floatingips",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "keystone#sep#user_group_membership",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#portsecuritybindings",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#quotas",
+        "keystone#sep#federated_user",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#instance_info_caches",
+        "csail_stata_neutron#sep#securitygroupportbindings"
+      ]
+    }
+  },
+  {
+    "query_index": 82,
+    "query": "Provide id information about the local user with name prime_helix.306sonic.",
+    "top_k_predictions": {
+      "1": [
+        "keystone#sep#local_user"
+      ],
+      "3": [
+        "keystone#sep#local_user",
+        "csail_stata_nova#sep#key_pairs",
+        "csail_stata_nova#sep#shadow_instances"
+      ],
+      "5": [
+        "keystone#sep#local_user",
+        "csail_stata_nova#sep#key_pairs",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#providerresourceassociations"
+      ],
+      "10": [
+        "keystone#sep#local_user",
+        "csail_stata_nova#sep#key_pairs",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#securitygroups"
+      ],
+      "15": [
+        "keystone#sep#local_user",
+        "csail_stata_nova#sep#key_pairs",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_nova#sep#instances",
+        "csail_stata_nova#sep#fixed_ips",
+        "csail_stata_nova#sep#shadow_fixed_ips",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_neutron#sep#securitygroups",
+        "csail_stata_nova#sep#shadow_block_device_mapping",
+        "keystone#sep#user_group_membership",
+        "csail_stata_cinder#sep#volumes",
+        "csail_stata_nova#sep#block_device_mapping",
+        "csail_stata_neutron#sep#floatingips"
+      ]
+    }
+  },
+  {
+    "query_index": 83,
+    "query": "Provide information about subnets associated with networks 0a1d0a27-cffa-4de3-92c5-9d3fd3f2e74d and c9e8f307-e1d5-4c06-b464-ef5370ca1d6d.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ipallocationpools"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#subnetpoolprefixes",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#cisco_ml2_n1kv_network_bindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ml2_network_segments"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#subnetpoolprefixes",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#cisco_ml2_n1kv_network_bindings",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#ml2_network_segments",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#ipavailabilityranges"
+      ]
+    }
+  },
+  {
+    "query_index": 84,
+    "query": "Provide information about subnet access control for subnet 76123b94-2ae9-40c4-a4c6-03ee98d081d9.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnets"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#pools"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#ports"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#ports",
+        "csail_stata_neutron#sep#securitygrouprules",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#networkrbacs",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networksecuritybindings"
+      ]
+    }
+  },
+  {
+    "query_index": 85,
+    "query": "Provide password information about the local user with name prime_helix.306sonic.",
+    "top_k_predictions": {
+      "1": [
+        "keystone#sep#local_user"
+      ],
+      "3": [
+        "keystone#sep#local_user",
+        "csail_stata_nova#sep#key_pairs",
+        "keystone#sep#password"
+      ],
+      "5": [
+        "keystone#sep#local_user",
+        "csail_stata_nova#sep#key_pairs",
+        "keystone#sep#password",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#bgp_peers"
+      ],
+      "10": [
+        "keystone#sep#local_user",
+        "csail_stata_nova#sep#key_pairs",
+        "keystone#sep#password",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#bgp_peers",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_neutron#sep#securitygrouprules"
+      ],
+      "15": [
+        "keystone#sep#local_user",
+        "csail_stata_nova#sep#key_pairs",
+        "keystone#sep#password",
+        "csail_stata_neutron#sep#lbaas_members",
+        "csail_stata_neutron#sep#bgp_peers",
+        "csail_stata_neutron#sep#default_security_group",
+        "csail_stata_neutron#sep#members",
+        "csail_stata_nova#sep#shadow_instances",
+        "csail_stata_neutron#sep#providerresourceassociations",
+        "csail_stata_neutron#sep#securitygrouprules",
+        "keystone#sep#credential",
+        "csail_stata_nova#sep#shadow_key_pairs",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#lbaas_listeners",
+        "csail_stata_neutron#sep#securitygroups"
+      ]
+    }
+  },
+  {
+    "query_index": 86,
+    "query": "Provide information about subnets associated with network 0a1d0a27-cffa-4de3-92c5-9d3fd3f2e74d.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ipallocationpools"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#subnetpoolprefixes",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#cisco_ml2_n1kv_network_bindings"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#subnetpoolprefixes",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#cisco_ml2_n1kv_network_bindings",
+        "csail_stata_neutron#sep#ml2_network_segments",
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#networksecuritybindings",
+        "csail_stata_neutron#sep#allowedaddresspairs",
+        "csail_stata_neutron#sep#nuage_subnet_l2dom_mapping"
+      ]
+    }
+  },
+  {
+    "query_index": 87,
+    "query": "Provide information about network that include subnet 76123b94-2ae9-40c4-a4c6-03ee98d081d9.",
+    "top_k_predictions": {
+      "1": [
+        "csail_stata_neutron#sep#dnsnameservers"
+      ],
+      "3": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnets"
+      ],
+      "5": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#subnetroutes"
+      ],
+      "10": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#routerl3agentbindings"
+      ],
+      "15": [
+        "csail_stata_neutron#sep#dnsnameservers",
+        "csail_stata_neutron#sep#ipallocations",
+        "csail_stata_neutron#sep#subnets",
+        "csail_stata_neutron#sep#ipallocationpools",
+        "csail_stata_neutron#sep#subnetroutes",
+        "csail_stata_neutron#sep#networkdhcpagentbindings",
+        "csail_stata_neutron#sep#ipavailabilityranges",
+        "csail_stata_neutron#sep#routerports",
+        "csail_stata_neutron#sep#pools",
+        "csail_stata_neutron#sep#routerl3agentbindings",
+        "csail_stata_neutron#sep#ml2_network_segments",
+        "csail_stata_neutron#sep#networks",
+        "csail_stata_neutron#sep#cisco_ml2_n1kv_network_bindings",
+        "csail_stata_neutron#sep#nuage_subnet_l2dom_mapping",
+        "csail_stata_neutron#sep#floatingips"
+      ]
+    }
+  }
+]
