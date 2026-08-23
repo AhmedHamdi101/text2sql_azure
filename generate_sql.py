@@ -52,20 +52,40 @@ def make_prompt(question, schema, dialect):
 
 
 def extract_sql(text):
-    """Clean the completion and always return SQL beginning with SELECT."""
-    fenced = re.search(r"```(?:sql)?\s*(.*?)```", text, re.IGNORECASE | re.DOTALL)
-    if fenced:
-        text = fenced.group(1)
-    text = re.sub(r"^\s*(?:SQL\s*:\s*)", "", text, flags=re.IGNORECASE).strip()
-    start = re.search(r"\bSELECT\b", text, re.IGNORECASE)
-    if start:
-        text = text[start.end():].strip()
-    if not text:
+    """Extract SQL without modifying SQL literals or structure."""
+    if not isinstance(text, str) or not text.strip():
         raise ValueError("The model returned empty SQL")
-    text = " ".join(text.split())
-    if ";" in text:
-        text = text.split(";", 1)[0].strip()
-    return f"SELECT {text};"
+
+    text = text.strip()
+
+    fenced = re.search(
+        r"```(?:sql)?\s*(.*?)```",
+        text,
+        re.IGNORECASE | re.DOTALL,
+    )
+    if fenced:
+        text = fenced.group(1).strip()
+
+    text = re.sub(
+        r"^\s*(?:SQL\s*:\s*)",
+        "",
+        text,
+        flags=re.IGNORECASE,
+    ).strip()
+
+    start = re.search(
+        r"(?im)^\s*(SELECT|WITH)\b",
+        text,
+    )
+    if not start:
+        raise ValueError(f"No SQL statement found: {text!r}")
+
+    sql = text[start.start():].strip()
+
+    if not sql.endswith(";"):
+        sql += ";"
+
+    return sql
 
 
 def main():
@@ -125,6 +145,7 @@ def main():
             ]
             schema = selected_schema(pairs, schemas)
             prompt = make_prompt(example["question"], schema, args.dialect)
+            raw_output = None
             sql = None
             if not args.dry_run:
                 response = client.chat.completions.create(
@@ -133,7 +154,8 @@ def main():
                     temperature=args.temperature,
                     seed=args.seed,
                 )
-                sql = extract_sql(response.choices[0].message.content)
+                raw_output = response.choices[0].message.content
+                sql = extract_sql(raw_output)
 
             result = {
                 "method": args.method,
@@ -146,6 +168,7 @@ def main():
                     "schema": schema,
                     "prompt": prompt,
                 },
+                "raw_output": raw_output,
                 "output": sql,
             }
             output_file.write(json.dumps(result, ensure_ascii=False) + "\n")
