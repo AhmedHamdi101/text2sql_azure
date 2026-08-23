@@ -13,7 +13,7 @@ The retrieval predictions are normalized using the same database selection and t
 Commands using relative paths assume you are at the repository root:
 
 ```bash
-cd /export/bayan_Text2SQL
+cd path/to/text2sql_azure
 ```
 
 ## Directory layout
@@ -144,11 +144,10 @@ Use an exact deployment name available in your Foundry project.
 
 ## Recommended first run: no API
 
-Use local dry-run mode to validate the entire input pipeline without generating SQL:
+Use local dry-run mode from the repository directory to validate the entire input pipeline without generating SQL:
 
 ```bash
-bash /export/bayan_Text2SQL/text2sql_azure/local_script/main.sh \
-    no-api ours bird --dry-run
+bash local_script/main.sh no-api ours bird --dry-run
 ```
 
 The `no-api` value is only a placeholder model name. In dry-run mode it is not sent anywhere.
@@ -180,15 +179,13 @@ dry_run_outputs/ours/bird/ours_top15.jsonl
 ## Run locally with the API
 
 ```bash
-bash /export/bayan_Text2SQL/text2sql_azure/local_script/main.sh \
-    MODEL METHOD DATASET
+bash local_script/main.sh MODEL METHOD DATASET
 ```
 
 Example:
 
 ```bash
-bash /export/bayan_Text2SQL/text2sql_azure/local_script/main.sh \
-    gpt-5-5-amr ours bird
+bash local_script/main.sh gpt-5-5-amr ours bird
 ```
 
 Local execution runs K=5, K=10, and K=15 sequentially in the current terminal. It makes one API request per dataset example for each K.
@@ -267,14 +264,14 @@ methods/qgpt.sh
 Local example:
 
 ```bash
-bash text2sql_azure/local_script/methods/iterjar.sh \
+bash local_script/methods/iterjar.sh \
     gpt-5-5-amr bird
 ```
 
 Local dry-run example:
 
 ```bash
-bash text2sql_azure/local_script/methods/iterjar.sh \
+bash local_script/methods/iterjar.sh \
     no-api bird --dry-run
 ```
 
@@ -292,11 +289,11 @@ Calling Python directly provides control over one K, the dialect, temperature, s
 ### Direct dry run
 
 ```bash
-conda run -n text2sql_llm python text2sql_azure/generate_sql.py \
+conda run -n text2sql_llm python generate_sql.py \
     --method Ours \
-    --predictions text2sql_azure/data/ours/bird/predictions.json \
-    --test text2sql_azure/data/datasets/bird/test.json \
-    --schemas text2sql_azure/data/datasets/bird/schemas.json \
+    --predictions data/ours/bird/predictions.json \
+    --test data/datasets/bird/test.json \
+    --schemas data/datasets/bird/schemas.json \
     --output /tmp/ours_bird_k5.jsonl \
     --top-k 5 \
     --dialect SQLite \
@@ -309,12 +306,12 @@ conda run -n text2sql_llm python text2sql_azure/generate_sql.py \
 ```bash
 export AZURE_FOUNDRY_MODEL="gpt-5-5-amr"
 
-conda run -n text2sql_llm python text2sql_azure/generate_sql.py \
+conda run -n text2sql_llm python generate_sql.py \
     --method DBCopilot \
-    --predictions text2sql_azure/data/dbcopilot/spider/predictions.json \
-    --test text2sql_azure/data/datasets/spider/test.json \
-    --schemas text2sql_azure/data/datasets/spider/schemas.json \
-    --output text2sql_azure/outputs/gpt-5-5-amr/spider/dbcopilot_top5.jsonl \
+    --predictions data/dbcopilot/spider/predictions.json \
+    --test data/datasets/spider/test.json \
+    --schemas data/datasets/spider/schemas.json \
+    --output outputs/gpt-5-5-amr/spider/dbcopilot_top5.jsonl \
     --top-k 5 \
     --dialect SQLite \
     --temperature 0 \
@@ -430,7 +427,7 @@ The output file is opened in write mode, so rerunning the same method/model/data
 `test_foundry.py` sends a small request to the deployment hardcoded in its `MODEL` variable:
 
 ```bash
-conda run -n text2sql_llm python text2sql_azure/test_foundry.py
+conda run -n text2sql_llm python test_foundry.py
 ```
 
 Set the two API environment variables first. Change `MODEL` inside `test_foundry.py` if you want to test another deployment.
@@ -440,13 +437,13 @@ Set the two API environment variables first. Change `MODEL` inside `test_foundry
 Validate Ours on BIRD without API calls:
 
 ```bash
-bash text2sql_azure/local_script/main.sh no-api ours bird --dry-run
+bash local_script/main.sh no-api ours bird --dry-run
 ```
 
 Generate DBCopilot SQL for Spider locally:
 
 ```bash
-bash text2sql_azure/local_script/main.sh gpt-5-5-amr dbcopilot spider
+bash local_script/main.sh gpt-5-5-amr dbcopilot spider
 ```
 
 Submit CORE-T on Beaver-DW through SLURM:
@@ -458,11 +455,11 @@ bash text2sql_azure/panther_script/main.sh gpt-5-5-amr core-t beaver_dw
 Validate QGpT on only ten Spider examples and K=10:
 
 ```bash
-conda run -n text2sql_llm python text2sql_azure/generate_sql.py \
+conda run -n text2sql_llm python generate_sql.py \
     --method QGpT \
-    --predictions text2sql_azure/data/qgpt/spider/predictions.json \
-    --test text2sql_azure/data/datasets/spider/test.json \
-    --schemas text2sql_azure/data/datasets/spider/schemas.json \
+    --predictions data/qgpt/spider/predictions.json \
+    --test data/datasets/spider/test.json \
+    --schemas data/datasets/spider/schemas.json \
     --output /tmp/qgpt_spider_k10.jsonl \
     --top-k 10 \
     --limit 10 \
