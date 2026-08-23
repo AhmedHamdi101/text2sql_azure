@@ -284,7 +284,7 @@ sbatch text2sql_azure/panther_script/methods/iterjar.sh \
 
 ## Direct Python usage
 
-Calling Python directly provides control over one K, the dialect, temperature, seed, and query limit.
+Calling Python directly provides control over one K, the dialect, seed, and query limit.
 
 ### Direct dry run
 
@@ -314,7 +314,6 @@ conda run -n text2sql_llm python generate_sql.py \
     --output outputs/gpt-5-5-amr/spider/dbcopilot_top5.jsonl \
     --top-k 5 \
     --dialect SQLite \
-    --temperature 0 \
     --seed 42
 ```
 
@@ -329,7 +328,6 @@ conda run -n text2sql_llm python generate_sql.py \
 | `--output` | Yes | — | Destination JSONL file. Parent directories are created automatically. |
 | `--top-k` | No | `5` | Number of retrieved table predictions used for each example. |
 | `--dialect` | No | `SQLite` | SQL dialect named in the prompt, such as `SQLite` or `MySQL`. |
-| `--temperature` | No | `0.0` | Sampling temperature passed to the API. |
 | `--seed` | No | `42` | Seed passed to the API. |
 | `--limit` | No | all rows | Process only the first N examples. Useful for testing. |
 | `--dry-run` | No | disabled | Build and save prompts without importing the API client or generating SQL. |

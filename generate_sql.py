@@ -102,7 +102,6 @@ def main():
         help="Number of retrieved tables, matching the shared metrics evaluation",
     )
     parser.add_argument("--dialect", default="SQLite")
-    parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--limit", type=int, help="Only run the first N queries")
     parser.add_argument(
@@ -151,7 +150,6 @@ def main():
                 response = client.chat.completions.create(
                     model=model,
                     messages=[{"role": "user", "content": prompt}],
-                    temperature=args.temperature,
                     seed=args.seed,
                 )
                 raw_output = response.choices[0].message.content
