@@ -117,8 +117,9 @@ def load_dbcopilot(row, k):
     for schema in schemas:
         if not isinstance(schema, dict) or not schema.get("database"):
             continue
-        for table in schema.get("tables") or []:
-            table_id = normalize_table_id(f"{schema['database']}{SEP}{table}")
+
+        for table_name in schema.get("tables") or []:
+            table_id = normalize_table_id(f"{schema['database']}{SEP}{table_name}")
             if table_id and table_id not in table_ids:
                 table_ids.append(table_id)
     return database, table_ids[:k]
@@ -154,7 +155,9 @@ def load_predictions(path, method, k):
             else:
                 database, table_ids = None, normalize_table_list(row)[:k]
         elif method == "dbcopilot":
-            database, table_ids = load_dbcopilot(row if isinstance(row, dict) else {}, k)
+            database, table_ids = load_dbcopilot(
+                row if isinstance(row, dict) else {}, k
+            )
         elif method == "iterjar":
             database, table_ids = None, normalize_table_list(row)[:k]
         elif method == "core-t":

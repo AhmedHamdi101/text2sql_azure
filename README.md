@@ -358,11 +358,11 @@ The generator never uses the gold database to choose the prompt schema.
 
 The prompt contains:
 
-1. The SQL dialect.
-2. The predicted database.
-3. Every selected table and its columns.
+1. An instruction to generate a valid query in the selected SQL dialect.
+2. Rules requiring the model to use only the provided schema and return SQL only.
+3. The predicted database with every selected table and its columns.
 4. The natural-language question.
-5. A final `SELECT` prefix.
+5. A final `SQL:` completion marker.
 
 The model is instructed to return SQL only, without an explanation.
 
@@ -374,24 +374,30 @@ Each line of the output is one JSON object:
 {
   "method": "Ours",
   "dry_run": false,
+  "status": "ok",
   "input": {
     "question": "...",
     "predicted_database": "...",
     "retrieved_table_ids": ["db#sep#table"],
     "predicted_table_ids": ["db#sep#table"],
+    "invalid_predicted_tables": [],
+    "num_requested_tables": 1,
+    "num_valid_tables": 1,
     "schema": [
       {
         "name": "database",
         "tables": [
           {
             "name": "table",
-            "columns": ["column_1", "column_2"]
+            "columns": ["column_1", "column_2"],
+            "column_types": ["text", "number"]
           }
         ]
       }
     ],
     "prompt": "..."
   },
+  "raw_output": "SELECT ...",
   "output": "SELECT ...;"
 }
 ```
@@ -400,23 +406,44 @@ Field meanings:
 
 - `retrieved_table_ids`: the top-K retrieval input used by the metrics-compatible loader.
 - `predicted_table_ids`: the final deduplicated tables belonging to the selected database.
-- `schema`: the database/table/column schema shown to the model.
+- `invalid_predicted_tables`: predicted tables in the selected database that do not exist in the canonical schema.
+- `num_requested_tables`: number of entries supplied by the retriever within the requested top-K budget.
+- `num_valid_tables`: number of valid tables actually included in the prompt.
+- `schema`: the database/table/column schema shown to the model, including an aligned type for every column.
 - `prompt`: the exact prompt sent to the model.
-- `output`: cleaned SQL, or `null` during a dry run.
+- `status`: `ok` for a normal row, or a query-level failure status described below.
+- `output`: cleaned SQL, or `null` during a dry run or query-level failure.
 
 Live SQL output is normalized to begin with `SELECT` and end with a semicolon. Markdown fences and leading `SQL:` text are removed.
 
 ## Validation and failure behavior
 
-The program stops with an error when:
+Predicted tables absent from the canonical schema are recorded in
+`invalid_predicted_tables` and omitted without replacement. SQL generation still
+runs when at least one valid table remains. When DB-first filtering and invalid-table
+removal leave no usable tables, the generator writes a `no_valid_tables` row with an
+empty schema, no prompt, and `output: null`, then continues to the next example.
+This records the query as a downstream failure without changing the database,
+retrieval budget, or table-selection logic.
+
+The following query-level failures write one row with `output: null` and then
+continue to the next example. Evaluation should count each one as EX = 0:
+
+- `no_valid_database`: no database could be selected from the prediction.
+- `no_valid_tables`: DB-first filtering and schema validation left no usable table.
+- `empty_model_output`: the API returned no response or blank text.
+- `invalid_model_output`: the model returned non-empty text without a recognizable
+  `SELECT` or `WITH` statement.
+- `malformed_model_response`: the response object exists, but its first choice or
+  message content is missing or unusable.
+
+The program still stops with an error when:
 
 - Prediction and test files have different numbers of rows.
-- A prediction has no selected database.
-- No retrieved tables belong to the selected database.
 - A predicted database is absent from `schemas.json`.
-- A predicted table is absent from the selected database schema.
-- The model returns an empty SQL completion.
 - Required API variables are missing during a live run.
+- The API request itself fails, for example because of authentication, networking,
+  rate limiting, or a service error.
 
 The output file is opened in write mode, so rerunning the same method/model/dataset/K overwrites that output file. If a run fails partway through, the file contains the rows completed before the failure.
 

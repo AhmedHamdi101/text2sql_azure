@@ -9,10 +9,29 @@ from pathlib import Path
 from prediction_utils import load_predictions
 
 
+class QueryFailure(ValueError):
+    """A failure that applies to one query rather than the whole run."""
+
+    status = "query_failure"
+
+
+class EmptyModelOutput(QueryFailure):
+    status = "empty_model_output"
+
+
+class InvalidModelOutput(QueryFailure):
+    status = "invalid_model_output"
+
+
+class MalformedModelResponse(QueryFailure):
+    status = "malformed_model_response"
+
+
 def selected_schema(pairs, all_schemas):
-    """Group valid predicted tables by database and attach their columns."""
+    """Attach canonical columns to valid tables and report invalid table names."""
     database_names = {name.lower(): name for name in all_schemas}
     result = {}
+    invalid_tables = []
 
     for predicted_database, predicted_table in pairs:
         database = database_names.get(predicted_database.lower())
@@ -24,37 +43,70 @@ def selected_schema(pairs, all_schemas):
             None,
         )
         if table is None:
-            raise ValueError(f"Predicted table not found in {database}: {predicted_table}")
-        columns = [
-            column["name"] if isinstance(column, dict) else column
-            for column in table.get("columns", [])
-        ]
+            invalid_tables.append(predicted_table)
+            continue
+        columns = []
+        column_types = []
+        for column in table.get("columns", []):
+            if isinstance(column, dict):
+                columns.append(column["name"])
+                column_types.append(str(column.get("type") or "unknown"))
+            else:
+                columns.append(column)
+                column_types.append("unknown")
         result.setdefault(database, [])
         if not any(x["name"] == table["name"] for x in result[database]):
-            result[database].append({"name": table["name"], "columns": columns})
+            result[database].append({
+                "name": table["name"],
+                "columns": columns,
+                "column_types": column_types,
+            })
 
-    return [{"name": database, "tables": tables} for database, tables in result.items()]
+    schema = [{"name": database, "tables": tables} for database, tables in result.items()]
+    return schema, invalid_tables
 
 
 def make_prompt(question, schema, dialect):
-    lines = [
-        f"### Complete {dialect} SQL query only and with no explanation",
-        f"### {dialect} SQL databases, with their tables and properties:",
-        "#",
-    ]
+    schema_lines = []
     for database in schema:
-        lines.append(f'# {database["name"]}')
+        schema_lines.append(f'Database: {database["name"]}')
         for table in database["tables"]:
-            columns = ", ".join(f'"{column}"' for column in table["columns"])
-            lines.append(f'# {table["name"]}({columns})')
-    lines += [f"### {question}", "SELECT"]
-    return "\n".join(lines)
+            column_types = table.get("column_types", [])
+            columns = ", ".join(
+                f'"{column}" {column_types[index] if index < len(column_types) else "unknown"}'
+                for index, column in enumerate(table["columns"])
+            )
+            schema_lines.append(f'{table["name"]}({columns})')
+
+    schema_text = "\n".join(schema_lines)
+    return f"""You are given a database schema and a natural-language question.
+
+Generate a valid {dialect} SQL query that answers the question.
+
+Rules:
+
+- Use only the provided tables and columns.
+- Do not invent table or column names.
+- Use joins when multiple tables are required.
+- Return only the SQL query without explanation.
+
+Database schema:
+{schema_text}
+
+Question:
+{question}
+
+SQL:"""
 
 
 def extract_sql(text):
     """Extract SQL without modifying SQL literals or structure."""
-    if not isinstance(text, str) or not text.strip():
-        raise ValueError("The model returned empty SQL")
+    if text is None or (isinstance(text, str) and not text.strip()):
+        raise EmptyModelOutput("The model returned empty SQL")
+    if not isinstance(text, str):
+        raise MalformedModelResponse(
+            f"The model returned non-text content: {type(text).__name__}"
+        )
 
     text = text.strip()
 
@@ -78,7 +130,7 @@ def extract_sql(text):
         text,
     )
     if not start:
-        raise ValueError(f"No SQL statement found: {text!r}")
+        raise InvalidModelOutput(f"No SQL statement found: {text!r}")
 
     sql = text[start.start():].strip()
 
@@ -86,6 +138,80 @@ def extract_sql(text):
         sql += ";"
 
     return sql
+
+
+def response_content(response):
+    """Return completion text or classify an unusable API response."""
+    if response is None:
+        raise EmptyModelOutput("The API returned no response")
+
+    choices = getattr(response, "choices", None)
+    if not choices:
+        raise MalformedModelResponse("The model response has no choices")
+
+    try:
+        first_choice = choices[0]
+    except (IndexError, KeyError, TypeError) as error:
+        raise MalformedModelResponse(
+            "The model response choices are unusable"
+        ) from error
+
+    message = getattr(first_choice, "message", None)
+    if message is None:
+        raise MalformedModelResponse(
+            "The first model response choice has no message content"
+        )
+
+    missing = object()
+    content = getattr(message, "content", missing)
+    if content is missing or content is None or not isinstance(content, str):
+        raise MalformedModelResponse(
+            "The first model response choice contains unusable message content"
+        )
+    return content
+
+
+def make_result(
+    args,
+    example,
+    prediction,
+    status,
+    *,
+    schema=None,
+    prompt=None,
+    invalid_predicted_tables=None,
+    raw_output=None,
+    sql=None,
+):
+    """Build one output row with a consistent success/failure structure."""
+    schema = schema or []
+    invalid_predicted_tables = invalid_predicted_tables or []
+    return {
+        "method": args.method,
+        "dry_run": args.dry_run,
+        "status": status,
+        "input": {
+            "question": example["question"],
+            "predicted_database": prediction["database"],
+            "retrieved_table_ids": prediction["retrieved_table_ids"],
+            "predicted_table_ids": prediction["table_ids"],
+            "invalid_predicted_tables": invalid_predicted_tables,
+            "num_requested_tables": len(prediction["retrieved_table_ids"]),
+            "num_valid_tables": sum(
+                len(database["tables"])
+                for database in schema
+            ),
+            "schema": schema,
+            "prompt": prompt,
+        },
+        "raw_output": raw_output,
+        "output": sql,
+    }
+
+
+def write_result(output_file, result):
+    output_file.write(json.dumps(result, ensure_ascii=False) + "\n")
+    output_file.flush()
 
 
 def main():
@@ -135,14 +261,51 @@ def main():
     with args.output.open("w") as output_file:
         for index, (example, prediction) in enumerate(rows):
             if not prediction["database"]:
-                raise ValueError(f"Prediction {index} has no majority-voted database")
+                result = make_result(
+                    args,
+                    example,
+                    prediction,
+                    "no_valid_database",
+                )
+                write_result(output_file, result)
+                print(f"{index + 1}: no_valid_database")
+                continue
             if not prediction["tables"]:
-                raise ValueError(f"Prediction {index} has no tables in database {prediction['database']}")
+                result = make_result(
+                    args,
+                    example,
+                    prediction,
+                    "no_valid_tables",
+                )
+                write_result(output_file, result)
+                print(
+                    f"{index + 1}: no_valid_tables "
+                    f"(predicted database: {prediction['database']})"
+                )
+                continue
             pairs = [
                 (prediction["database"], table)
                 for table in prediction["tables"]
             ]
-            schema = selected_schema(pairs, schemas)
+            schema, invalid_predicted_tables = selected_schema(pairs, schemas)
+            num_valid_tables = sum(
+                len(database["tables"])
+                for database in schema
+            )
+            if not num_valid_tables:
+                result = make_result(
+                    args,
+                    example,
+                    prediction,
+                    "no_valid_tables",
+                    invalid_predicted_tables=invalid_predicted_tables,
+                )
+                write_result(output_file, result)
+                print(
+                    f"{index + 1}: no_valid_tables "
+                    f"(predicted database: {prediction['database']})"
+                )
+                continue
             prompt = make_prompt(example["question"], schema, args.dialect)
             raw_output = None
             sql = None
@@ -152,25 +315,36 @@ def main():
                     messages=[{"role": "user", "content": prompt}],
                     seed=args.seed,
                 )
-                raw_output = response.choices[0].message.content
-                sql = extract_sql(raw_output)
+                try:
+                    raw_output = response_content(response)
+                    sql = extract_sql(raw_output)
+                except QueryFailure as error:
+                    result = make_result(
+                        args,
+                        example,
+                        prediction,
+                        error.status,
+                        schema=schema,
+                        prompt=prompt,
+                        invalid_predicted_tables=invalid_predicted_tables,
+                        raw_output=raw_output,
+                    )
+                    write_result(output_file, result)
+                    print(f"{index + 1}: {error.status}")
+                    continue
 
-            result = {
-                "method": args.method,
-                "dry_run": args.dry_run,
-                "input": {
-                    "question": example["question"],
-                    "predicted_database": prediction["database"],
-                    "retrieved_table_ids": prediction["retrieved_table_ids"],
-                    "predicted_table_ids": prediction["table_ids"],
-                    "schema": schema,
-                    "prompt": prompt,
-                },
-                "raw_output": raw_output,
-                "output": sql,
-            }
-            output_file.write(json.dumps(result, ensure_ascii=False) + "\n")
-            output_file.flush()
+            result = make_result(
+                args,
+                example,
+                prediction,
+                "ok",
+                schema=schema,
+                prompt=prompt,
+                invalid_predicted_tables=invalid_predicted_tables,
+                raw_output=raw_output,
+                sql=sql,
+            )
+            write_result(output_file, result)
             print(f"{index + 1}: {'validated' if args.dry_run else sql}")
 
 
