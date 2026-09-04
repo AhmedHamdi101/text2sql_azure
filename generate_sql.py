@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 import re
+import sys
 from pathlib import Path
 
 from prediction_utils import load_predictions
@@ -214,6 +215,80 @@ def write_result(output_file, result):
     output_file.flush()
 
 
+ALIGNMENT_ID_KEYS = (
+    "question_id", "query_id", "example_id", "instance_id", "sample_id",
+    "query_index", "question_index", "example_index", "index", "idx", "id",
+)
+ALIGNMENT_INDEX_KEYS = {
+    "query_index", "question_index", "example_index", "index", "idx",
+}
+
+
+def _first_alignment_value(row, keys):
+    if not isinstance(row, dict):
+        return None, None
+    for key in keys:
+        if row.get(key) is not None:
+            return key, row[key]
+    return None, None
+
+
+def validate_row_alignment(prediction_rows, test_rows):
+    """Fail on identifiable row mismatches; warn when only position is available."""
+    rows_without_id = 0
+    for index, (prediction_row, test_row) in enumerate(zip(prediction_rows, test_rows)):
+        prediction_key, prediction_id = _first_alignment_value(
+            prediction_row, ALIGNMENT_ID_KEYS
+        )
+        test_key, test_id = _first_alignment_value(test_row, ALIGNMENT_ID_KEYS)
+
+        if prediction_key is not None:
+            if test_key is not None:
+                expected = test_id
+                expected_key = test_key
+            elif prediction_key in ALIGNMENT_INDEX_KEYS:
+                expected = index
+                expected_key = "test row index"
+            else:
+                raise ValueError(
+                    f"Cannot validate prediction row {index}: it contains "
+                    f"{prediction_key}={prediction_id!r}, but the corresponding "
+                    "test row has no question/query ID"
+                )
+
+            if str(prediction_id) != str(expected):
+                raise ValueError(
+                    f"Prediction/test row alignment mismatch at row {index}: "
+                    f"prediction {prediction_key}={prediction_id!r}, "
+                    f"{expected_key}={expected!r}"
+                )
+        else:
+            rows_without_id += 1
+
+        # Existing files often retain the question text rather than a separate ID.
+        prediction_key, prediction_question = _first_alignment_value(
+            prediction_row, ("question", "query")
+        )
+        test_key, test_question = _first_alignment_value(
+            test_row, ("question", "query")
+        )
+        if prediction_key is not None and test_key is not None:
+            if str(prediction_question).strip() != str(test_question).strip():
+                raise ValueError(
+                    f"Prediction/test row alignment mismatch at row {index}: "
+                    f"prediction {prediction_key}={prediction_question!r}, "
+                    f"test {test_key}={test_question!r}"
+                )
+
+    if rows_without_id:
+        print(
+            f"WARNING: Prediction file contains no question/query ID for "
+            f"{rows_without_id} row(s); continuing with unchanged positional "
+            "alignment. Question text was compared where available.",
+            file=sys.stderr,
+        )
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--method", required=True, choices=["Ours", "DBCopilot", "IterJar", "Core-t", "QGpT"])
@@ -237,11 +312,13 @@ def main():
     )
     args = parser.parse_args()
 
+    prediction_rows = json.loads(args.predictions.read_text())
     predictions = load_predictions(args.predictions, args.method, args.top_k)
     test = json.loads(args.test.read_text())
     schemas = json.loads(args.schemas.read_text())
     if len(predictions) != len(test):
         raise ValueError(f"Predictions and test data have different lengths: {len(predictions)} != {len(test)}")
+    validate_row_alignment(prediction_rows, test)
 
     client = None
     if not args.dry_run:
