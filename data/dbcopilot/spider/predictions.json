@@ -19950,7 +19950,7 @@
     "pred_texts": [
       "cre_Doc_Template_Mgt<sep> templates<sep> documents",
       "document_management<sep> documents<sep> document_structures",
-      "cre_Doc_Tracking_DB<sep> all_documents<sep> ref_document_types<sep> documents_to_be_destro",
+      "cre_Doc_Tracking_DB<sep> all_documents<sep> ref_document_types<sep> documents_to_be_destroyed",
       "cre_Doc_Template_Mgt<sep> documents<sep> templates",
       "e_government<sep> forms<sep> party_forms",
       "document_management<sep> document_structures<sep> documents",
@@ -19981,7 +19981,7 @@
         "tables": [
           "all_documents",
           "ref_document_types",
-          "documents_to_be_destro"
+          "documents_to_be_destroyed"
         ]
       },
       {
@@ -23485,8 +23485,8 @@
     "question": "How many paragraphs for the document with name 'Summer Show'?",
     "pred_texts": [
       "cre_Doc_Template_Mgt<sep> paragraphs<sep> documents",
-      "document_management<sep> document_sections<sep> documents",
       "cre_Doc_Tracking_DB<sep> document_locations<sep> ref_calendar<sep> documents_to_be_destroyed",
+      "document_management<sep> document_sections<sep> documents",
       "student_transcripts_tracking<sep> sections<sep> student_enrolment_courses<sep> transcript_contents",
       "cre_Doc_Template_Mgt<sep> paragraphs<sep> documents",
       "cre_Doc_Template_Mgt<sep> documents<sep> paragraphs",
@@ -23504,18 +23504,18 @@
         ]
       },
       {
-        "database": "document_management",
-        "tables": [
-          "document_sections",
-          "documents"
-        ]
-      },
-      {
         "database": "cre_Doc_Tracking_DB",
         "tables": [
           "document_locations",
           "ref_calendar",
           "documents_to_be_destroyed"
+        ]
+      },
+      {
+        "database": "document_management",
+        "tables": [
+          "document_sections",
+          "documents"
         ]
       },
       {
@@ -23875,7 +23875,7 @@
     "question": "What are the ids and texts of paragraphs in the document titled 'Welcome to NY'?",
     "pred_texts": [
       "cre_Doc_Template_Mgt<sep> paragraphs<sep> documents",
-      "cre_Doc_Tracking_DB<sep> document_locations<sep> ref_locations<sep> all_documents<sep> documents_to_be",
+      "cre_Doc_Tracking_DB<sep> document_locations<sep> ref_locations<sep> all_documents<sep> documents_to_be_destroyed",
       "student_transcripts_tracking<sep> sections<sep> student_enrolment_courses<sep> transcript_contents",
       "e_government<sep> forms<sep> party_forms<sep> party_addresses<sep> addresses",
       "cre_Doc_Template_Mgt<sep> documents<sep> paragraphs",
@@ -23899,7 +23899,7 @@
           "document_locations",
           "ref_locations",
           "all_documents",
-          "documents_to_be"
+          "documents_to_be_destroyed"
         ]
       },
       {
@@ -24036,7 +24036,7 @@
     "question": "What are the paragraph texts for the document with the name 'Customer reviews'?",
     "pred_texts": [
       "cre_Doc_Template_Mgt<sep> paragraphs<sep> documents",
-      "cre_Drama_Workshop_Groups<sep> customer_orders<sep> invoices<sep> ref_payment_methods<sep> invoice_item",
+      "cre_Drama_Workshop_Groups<sep> customer_orders<sep> invoices<sep> ref_payment_methods<sep> invoice_items",
       "cre_Doc_Template_Mgt<sep> documents<sep> paragraphs<sep> templates",
       "e_government<sep> forms<sep> party_forms<sep> party_addresses<sep> addresses",
       "document_management<sep> document_sections<sep> documents<sep> document_functional_areas<sep> functional_areas",
@@ -24061,7 +24061,7 @@
           "invoices",
           "ref_payment_methods",
           "customer_orders",
-          "invoice_item",
+          "invoice_items",
           "bookings"
         ]
       },
@@ -26699,7 +26699,7 @@
     "pred_texts": [
       "course_teach<sep> teacher<sep> course_arrange",
       "course_teach<sep> course_arrange<sep> teacher",
-      "student_transcripts_tracking<sep> courses<sep> sections<sep> student_enrolment_courses<sep> transcript_contents<sep> transcripts<sep>",
+      "student_transcripts_tracking<sep> courses<sep> sections<sep> student_enrolment_courses<sep> transcript_contents<sep> transcripts<sep> student_enrolment",
       "course_teach<sep> teacher<sep> course_arrange",
       "course_teach<sep> course_arrange<sep> teacher",
       "course_teach<sep> teacher<sep> course_arrange",
@@ -26724,7 +26724,7 @@
           "student_enrolment_courses",
           "transcript_contents",
           "transcripts",
-          ""
+          "student_enrolment"
         ]
       },
       {
@@ -33610,7 +33610,7 @@
     "question": "What are the descriptions for all the math courses?",
     "pred_texts": [
       "student_transcripts_tracking<sep> courses",
-      "cre_Doc_Tracking_DB<sep> all_documents<sep> ref_document_types<sep> documents_to_be_destro",
+      "cre_Doc_Tracking_DB<sep> all_documents<sep> ref_document_types<sep> documents_to_be_destroyed",
       "e_learning<sep> courses",
       "cre_Doc_Tracking_DB<sep> ref_locations<sep> document_locations",
       "student_transcripts_tracking<sep> courses",
@@ -33632,7 +33632,7 @@
         "tables": [
           "all_documents",
           "ref_document_types",
-          "documents_to_be_destro",
+          "documents_to_be_destroyed",
           "ref_locations",
           "document_locations"
         ]
@@ -64388,7 +64388,7 @@
     "question": "What are the cost and treatment type description of each treatment?",
     "pred_texts": [
       "dog_kennels<sep> treatments<sep> treatment_types",
-      "insurance_fnol<sep> first_notification_of_loss<sep> claims<sep> customers_policies<sep> available_policies",
+      "insurance_fnol<sep> first_notification_of_loss<sep> claims<sep> customers_policies<sep> available_policies<sep> services",
       "cre_Drama_Workshop_Groups<sep> ref_service_types<sep> services",
       "dog_kennels<sep> treatment_types<sep> treatments",
       "cre_Docs_and_Epenses<sep> ref_document_types<sep> documents",
@@ -64412,7 +64412,8 @@
           "first_notification_of_loss",
           "claims",
           "customers_policies",
-          "available_policies"
+          "available_policies",
+          "services"
         ]
       },
       {
@@ -65879,7 +65880,7 @@
     "pred_texts": [
       "dog_kennels<sep> owners<sep> dogs",
       "real_estate_properties<sep> properties<sep> ref_property_types<sep> other_property_features",
-      "real_estate_properties<sep> properties<sep> other_property_features<sep> ref_property_types",
+      "real_estate_properties<sep> properties<sep> other_property_features<sep> ref_property_types<sep> other_available_features",
       "tracking_share_transactions<sep> transactions<sep> investors<sep> transactions_lots<sep> sales",
       "dog_kennels<sep> owners<sep> dogs",
       "pets_1<sep> has_pet<sep> pets<sep> student",
@@ -65902,7 +65903,8 @@
         "tables": [
           "properties",
           "ref_property_types",
-          "other_property_features"
+          "other_property_features",
+          "other_available_features"
         ]
       },
       {
@@ -67425,7 +67427,7 @@
     "question": "What are each professional's first name and description of the treatment they have performed?",
     "pred_texts": [
       "dog_kennels<sep> treatments<sep> professionals",
-      "insurance_fnol<sep> first_notification_of_loss<sep> claims<sep> customers<sep> customers_policies<sep> available_poli",
+      "insurance_fnol<sep> first_notification_of_loss<sep> claims<sep> customers<sep> customers_policies<sep> available_policies<sep> services",
       "hospital_1<sep> undergoes<sep> trained_in<sep> prescribes",
       "cre_Doc_Tracking_DB<sep> ref_locations<sep> document_locations",
       "dog_kennels<sep> treatment_types<sep> treatments",
@@ -67451,7 +67453,8 @@
           "claims",
           "customers",
           "customers_policies",
-          "available_poli"
+          "available_policies",
+          "services"
         ]
       },
       {

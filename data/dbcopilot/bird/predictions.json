@@ -6910,7 +6910,7 @@
     "question": "Among the accounts who have approved loan date in 1997, list out the accounts that have the lowest approved amount and choose weekly issuance statement.",
     "pred_texts": [
       "financial<sep> loan<sep> disp<sep> account",
-      "works_cycles<sep> employeedepartmenthistory<sep> employeepayhistory<sep> businessentity<sep> businessentitycontact<sep> productlistprice",
+      "works_cycles<sep> employeedepartmenthistory<sep> employeepayhistory<sep> businessentity<sep> businessentitycontact<sep> productlistpricehistory",
       "financial<sep> account<sep> loan<sep> disp",
       "financial<sep> disp<sep> loan<sep> account",
       "student_club<sep> income<sep> member<sep> major<sep> zip_code",
@@ -6938,7 +6938,7 @@
           "employeepayhistory",
           "businessentity",
           "businessentitycontact",
-          "productlistprice"
+          "productlistpricehistory"
         ]
       },
       {
@@ -8680,8 +8680,8 @@
     "sql": "SELECT T1.account_id, T1.frequency FROM account AS T1 INNER JOIN district AS T2 ON T1.district_id = T2.district_id WHERE T2.A3 = 'east Bohemia' AND STRFTIME('%Y', T1.date) BETWEEN '1995' AND '2000'",
     "question": "From Year 1995 to 2000, who are the accounts holders from 'east Bohemia'. State the account ID the frequency of statement issuance.",
     "pred_texts": [
-      "financial<sep> disp<sep> account<sep> district",
       "college_completion<sep> state_sector_details<sep> institution_details<sep> state_sector_grads",
+      "financial<sep> disp<sep> account<sep> district",
       "world_development_indicators<sep> country<sep> footnotes<sep> seriesnotes<sep> countrynotes",
       "student_club<sep> income<sep> member<sep> zip_code",
       "world_development_indicators<sep> seriesnotes<sep> countrynotes<sep> series",
@@ -8693,20 +8693,20 @@
     ],
     "pred_schemas": [
       {
+        "database": "college_completion",
+        "tables": [
+          "state_sector_details",
+          "institution_details",
+          "state_sector_grads"
+        ]
+      },
+      {
         "database": "financial",
         "tables": [
           "disp",
           "account",
           "district",
           "loan"
-        ]
-      },
-      {
-        "database": "college_completion",
-        "tables": [
-          "state_sector_details",
-          "institution_details",
-          "state_sector_grads"
         ]
       },
       {
@@ -27674,7 +27674,7 @@
     "question": "How many cards with a 1993 frame version and available on paper have a sensitive content warning?",
     "pred_texts": [
       "card_games<sep> cards<sep> legalities",
-      "image_and_language<sep> img_obj_att<sep> att_classes<sep> img_rel<sep> im",
+      "image_and_language<sep> img_obj_att<sep> att_classes<sep> img_rel<sep> img_obj",
       "book_publishing_company<sep> roysched<sep> sales<sep> titleauthor",
       "card_games<sep> legalities<sep> cards",
       "book_publishing_company<sep> titles<sep> roysched<sep> sales",
@@ -27699,7 +27699,7 @@
           "img_obj_att",
           "att_classes",
           "img_rel",
-          "im"
+          "img_obj"
         ]
       },
       {
@@ -28521,7 +28521,7 @@
     "question": "Is there any card from Erica Yang artist in pauper format and available in paper? If so, indicate its ID.",
     "pred_texts": [
       "card_games<sep> cards<sep> foreign_data<sep> rulings",
-      "image_and_language<sep> img_rel<sep> img_obj_att<sep> att_classes<sep> im",
+      "image_and_language<sep> img_rel<sep> img_obj_att<sep> att_classes<sep> img_obj<sep> obj_classes",
       "card_games<sep> cards<sep> legalities<sep> foreign_data",
       "card_games<sep> foreign_data<sep> cards<sep> legalities",
       "simpson_episodes<sep> credit<sep> person",
@@ -28547,7 +28547,8 @@
           "img_rel",
           "img_obj_att",
           "att_classes",
-          "im"
+          "img_obj",
+          "obj_classes"
         ]
       },
       {
@@ -35562,7 +35563,7 @@
     "question": "Find the uuid of cards in which the old school format is restricted or banned.",
     "pred_texts": [
       "card_games<sep> legalities<sep> cards<sep> foreign_data",
-      "image_and_language<sep> img_obj<sep> img_obj_att<sep> att_classes<sep>",
+      "image_and_language<sep> img_obj<sep> img_obj_att<sep> att_classes<sep> img_rel",
       "card_games<sep> foreign_data<sep> legalities<sep> cards",
       "card_games<sep> cards<sep> legalities<sep> foreign_data",
       "video_games<sep> game_publisher<sep> game_platform<sep> region_sales<sep> game",
@@ -35588,7 +35589,7 @@
           "img_obj",
           "img_obj_att",
           "att_classes",
-          ""
+          "img_rel"
         ]
       },
       {
@@ -37338,7 +37339,7 @@
     "question": "From which post is the most popular tag excerpted from? Please give the body of the post.",
     "pred_texts": [
       "codebase_community<sep> tags<sep> posts",
-      "image_and_language<sep> img_rel<sep> img_obj_att<sep> att_classes<sep> im",
+      "image_and_language<sep> img_rel<sep> img_obj_att<sep> att_classes<sep> img_obj",
       "codebase_community<sep> posts<sep> tags",
       "codebase_community<sep> postlinks<sep> tags<sep> posts",
       "social_media<sep> twitter<sep> location<sep> user",
@@ -37364,7 +37365,7 @@
           "img_rel",
           "img_obj_att",
           "att_classes",
-          "im"
+          "img_obj"
         ]
       },
       {
@@ -41046,8 +41047,8 @@
     "question": "List out all post that are related to post ID 61217 and what is the popularity of this post?",
     "pred_texts": [
       "codebase_community<sep> postlinks<sep> posthistory<sep> badges",
+      "image_and_language<sep> img_rel<sep> pred_classes<sep> img_obj_att<sep> att_classes",
       "beer_factory<sep> rootbeerreview<sep> rootbeer<sep> geolocation",
-      "image_and_language<sep> img_rel<sep> pred_classes<sep> img_obj_att<sep> at",
       "image_and_language<sep> pred_classes<sep> img_rel",
       "codebase_community<sep> posts<sep> postlinks",
       "codebase_community<sep> badges<sep> posthistory<sep> postlinks",
@@ -41068,20 +41069,20 @@
         ]
       },
       {
-        "database": "beer_factory",
-        "tables": [
-          "rootbeerreview",
-          "rootbeer",
-          "geolocation"
-        ]
-      },
-      {
         "database": "image_and_language",
         "tables": [
           "img_rel",
           "pred_classes",
           "img_obj_att",
-          "at"
+          "att_classes"
+        ]
+      },
+      {
+        "database": "beer_factory",
+        "tables": [
+          "rootbeerreview",
+          "rootbeer",
+          "geolocation"
         ]
       },
       {
@@ -42420,8 +42421,8 @@
       "codebase_community<sep> users<sep> badges",
       "world_development_indicators<sep> country<sep> indicators<sep> seriesnotes<sep> series",
       "simpson_episodes<sep> person<sep> award<sep> vote",
+      "image_and_language<sep> img_rel<sep> img_obj<sep> obj_classes<sep> img_obj_att",
       "talkingdata<sep> gender_age<sep> events_relevant<sep> gender_age_train",
-      "image_and_language<sep> img_rel<sep> img_obj<sep> obj_classes<sep> img",
       "student_club<sep> member<sep> zip_code<sep> attendance",
       "soccer_2016<sep> country<sep> city<sep> player<sep> umpire<sep> batting_style",
       "movie_platform<sep> ratings_users<sep> ratings",
@@ -42454,20 +42455,20 @@
         ]
       },
       {
-        "database": "talkingdata",
-        "tables": [
-          "gender_age",
-          "events_relevant",
-          "gender_age_train"
-        ]
-      },
-      {
         "database": "image_and_language",
         "tables": [
           "img_rel",
           "img_obj",
           "obj_classes",
-          "img"
+          "img_obj_att"
+        ]
+      },
+      {
+        "database": "talkingdata",
+        "tables": [
+          "gender_age",
+          "events_relevant",
+          "gender_age_train"
         ]
       },
       {
@@ -43710,7 +43711,7 @@
     "question": "Among posts by Harvey Motulsky and Noah Snyder, which one has higher popularity?",
     "pred_texts": [
       "codebase_community<sep> posts<sep> posthistory<sep> users",
-      "image_and_language<sep> img_rel<sep> img_obj<sep> img_obj_att<sep> at",
+      "image_and_language<sep> img_rel<sep> img_obj<sep> img_obj_att<sep> att_classes",
       "codebase_community<sep> posts<sep> users<sep> posthistory",
       "image_and_language<sep> pred_classes<sep> img_rel",
       "codebase_community<sep> posthistory<sep> posts<sep> users",
@@ -43736,7 +43737,7 @@
           "img_rel",
           "img_obj",
           "img_obj_att",
-          "at",
+          "att_classes",
           "pred_classes"
         ]
       },
@@ -44585,7 +44586,7 @@
     "question": "Describe the post title which got positive comments and display names of the users who posted those comments.",
     "pred_texts": [
       "codebase_community<sep> posts<sep> posthistory<sep> users",
-      "image_and_language<sep> img_rel<sep> img_obj_att<sep> att_classes<sep> im",
+      "image_and_language<sep> img_rel<sep> img_obj_att<sep> att_classes<sep> img_obj",
       "codebase_community<sep> users<sep> posts<sep> posthistory",
       "public_review_platform<sep> users<sep> reviews<sep> tips",
       "public_review_platform<sep> users<sep> tips<sep> business_hours<sep> days",
@@ -44611,7 +44612,7 @@
           "img_rel",
           "img_obj_att",
           "att_classes",
-          "im"
+          "img_obj"
         ]
       },
       {
@@ -46517,8 +46518,8 @@
     "question": "Among the users located in United Kingdom, how many users whose post have a total favorite amount of 4 or more?",
     "pred_texts": [
       "codebase_community<sep> users<sep> posts<sep> badges",
+      "image_and_language<sep> img_rel<sep> img_obj_att<sep> att_classes<sep> pred_classes",
       "public_review_platform<sep> users<sep> tips<sep> checkins",
-      "image_and_language<sep> img_rel<sep> img_obj_att<sep> att_classes<sep> pre",
       "public_review_platform<sep> users<sep> users_compliments<sep> tips",
       "codebase_community<sep> posthistory<sep> users<sep> badges",
       "codebase_community<sep> posts<sep> users",
@@ -46538,21 +46539,21 @@
         ]
       },
       {
+        "database": "image_and_language",
+        "tables": [
+          "img_rel",
+          "img_obj_att",
+          "att_classes",
+          "pred_classes"
+        ]
+      },
+      {
         "database": "public_review_platform",
         "tables": [
           "users",
           "tips",
           "checkins",
           "users_compliments"
-        ]
-      },
-      {
-        "database": "image_and_language",
-        "tables": [
-          "img_rel",
-          "img_obj_att",
-          "att_classes",
-          "pre"
         ]
       },
       {
@@ -46590,7 +46591,7 @@
     "question": "What is the average number of posts voted by the oldest users?",
     "pred_texts": [
       "codebase_community<sep> users<sep> votes",
-      "image_and_language<sep> img_rel<sep> img_obj_att<sep> att_classes<sep> pre",
+      "image_and_language<sep> img_rel<sep> img_obj_att<sep> att_classes<sep> pred_classes",
       "codebase_community<sep> posts<sep> users",
       "codebase_community<sep> postlinks<sep> votes<sep> users",
       "codebase_community<sep> votes<sep> posts",
@@ -46616,7 +46617,7 @@
           "img_rel",
           "img_obj_att",
           "att_classes",
-          "pre"
+          "pred_classes"
         ]
       },
       {
@@ -47715,7 +47716,7 @@
     "question": "Identify the display name and location of the user, who was the last to edit the post with ID 183.",
     "pred_texts": [
       "codebase_community<sep> posts<sep> users<sep> posthistory",
-      "image_and_language<sep> img_rel<sep> img_obj_att<sep> att_classes<sep> pre",
+      "image_and_language<sep> img_rel<sep> img_obj_att<sep> att_classes<sep> pred_classes",
       "public_review_platform<sep> users<sep> users_compliments<sep> reviews",
       "codebase_community<sep> users<sep> posts<sep> badges",
       "codebase_community<sep> posthistory<sep> posts<sep> users",
@@ -47742,7 +47743,7 @@
           "img_rel",
           "img_obj_att",
           "att_classes",
-          "pre"
+          "pred_classes"
         ]
       },
       {
@@ -63322,8 +63323,8 @@
     "pred_texts": [
       "formula_1<sep> races<sep> seasons",
       "olympics<sep> event<sep> competitor_event<sep> games_competitor<sep> games",
-      "superstore<sep> east_superstore<sep> people<sep> west_superstore",
       "college_completion<sep> state_sector_details<sep> state_sector_grads<sep> institution_details",
+      "superstore<sep> east_superstore<sep> people<sep> west_superstore",
       "world_development_indicators<sep> series<sep> countrynotes<sep> seriesnotes",
       "software_company<sep> sales<sep> mailings1_2<sep> mailings3",
       "formula_1<sep> races<sep> circuits",
@@ -63350,19 +63351,19 @@
         ]
       },
       {
-        "database": "superstore",
-        "tables": [
-          "east_superstore",
-          "people",
-          "west_superstore"
-        ]
-      },
-      {
         "database": "college_completion",
         "tables": [
           "state_sector_details",
           "state_sector_grads",
           "institution_details"
+        ]
+      },
+      {
+        "database": "superstore",
+        "tables": [
+          "east_superstore",
+          "people",
+          "west_superstore"
         ]
       },
       {
@@ -85759,7 +85760,7 @@
     "question": "What is the average age of the male patient with high cholesterol?",
     "pred_texts": [
       "thrombosis_prediction<sep> patient<sep> examination",
-      "talkingdata<sep> gender_age<sep> events_relevant<sep> phone_brand_device_model2<sep> gender_age_test<sep> sample_sub",
+      "talkingdata<sep> gender_age<sep> events_relevant<sep> phone_brand_device_model2<sep> gender_age_test<sep> sample_submission",
       "synthea<sep> patients<sep> conditions<sep> observations",
       "thrombosis_prediction<sep> examination<sep> patient",
       "synthea<sep> observations<sep> patients<sep> conditions",
@@ -85785,7 +85786,7 @@
           "events_relevant",
           "phone_brand_device_model2",
           "gender_age_test",
-          "sample_sub"
+          "sample_submission"
         ]
       },
       {
@@ -94091,8 +94092,8 @@
       "student_club<sep> event<sep> attendance<sep> income",
       "works_cycles<sep> salesterritoryhistory<sep> salesorderheader<sep> salesorderdetail",
       "talkingdata<sep> events_relevant<sep> events<sep> phone_brand_device_model2<sep> gender_age",
-      "beer_factory<sep> transaction<sep> rootbeerreview<sep> rootbeer",
       "college_completion<sep> institution_details<sep> state_sector_details<sep> state_sector_grads",
+      "beer_factory<sep> transaction<sep> rootbeerreview<sep> rootbeer",
       "works_cycles<sep> salesterritoryhistory<sep> salesperson<sep> salesorderheader",
       "superstore<sep> people<sep> central_superstore",
       "student_club<sep> budget<sep> event<sep> attendance<sep> income",
@@ -94128,19 +94129,19 @@
         ]
       },
       {
-        "database": "beer_factory",
-        "tables": [
-          "transaction",
-          "rootbeerreview",
-          "rootbeer"
-        ]
-      },
-      {
         "database": "college_completion",
         "tables": [
           "institution_details",
           "state_sector_details",
           "state_sector_grads"
+        ]
+      },
+      {
+        "database": "beer_factory",
+        "tables": [
+          "transaction",
+          "rootbeerreview",
+          "rootbeer"
         ]
       },
       {
@@ -99942,8 +99943,8 @@
     "question": "In the College of Agriculture and Applied Sciences, how many majors are under the department of School of Applied Sciences, Technology and Education?",
     "pred_texts": [
       "college_completion<sep> institution_details<sep> institution_grads<sep> state_sector_details",
-      "california_schools<sep> frpm<sep> schools<sep> satscores",
       "college_completion<sep> state_sector_details<sep> institution_details<sep> state_sector_grads",
+      "california_schools<sep> frpm<sep> schools<sep> satscores",
       "university<sep> university<sep> university_year<sep> university_ranking_year",
       "cs_semester<sep> ra<sep> student<sep> registration<sep> course",
       "college_completion<sep> institution_grads<sep> institution_details",
@@ -100181,8 +100182,8 @@
       "student_club<sep> member<sep> zip_code<sep> major",
       "college_completion<sep> state_sector_grads<sep> state_sector_details<sep> institution_details",
       "cs_semester<sep> ra<sep> student<sep> registration",
-      "legislator<sep> current-terms<sep> historical<sep> social-media",
       "college_completion<sep> state_sector_details<sep> state_sector_grads<sep> institution_details",
+      "legislator<sep> current-terms<sep> historical<sep> social-media",
       "legislator<sep> historical-terms<sep> current-terms<sep> social-media",
       "student_club<sep> member<sep> major",
       "student_club<sep> zip_code<sep> member",

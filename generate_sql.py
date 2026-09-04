@@ -48,20 +48,40 @@ def selected_schema(pairs, all_schemas):
             continue
         columns = []
         column_types = []
+        primary_keys = []
+        foreign_keys = []
         for column in table.get("columns", []):
             if isinstance(column, dict):
                 columns.append(column["name"])
                 column_types.append(str(column.get("type") or "unknown"))
+                if column.get("primary_key"):
+                    primary_keys.append(column["name"])
+                foreign_key = column.get("foreign_key")
+                if (
+                    isinstance(foreign_key, dict)
+                    and foreign_key.get("table")
+                    and foreign_key.get("column")
+                ):
+                    foreign_keys.append({
+                        "column": column["name"],
+                        "table": foreign_key["table"],
+                        "referenced_column": foreign_key["column"],
+                    })
             else:
                 columns.append(column)
                 column_types.append("unknown")
         result.setdefault(database, [])
         if not any(x["name"] == table["name"] for x in result[database]):
-            result[database].append({
+            selected_table = {
                 "name": table["name"],
                 "columns": columns,
                 "column_types": column_types,
-            })
+            }
+            if primary_keys:
+                selected_table["primary_keys"] = primary_keys
+            if foreign_keys:
+                selected_table["foreign_keys"] = foreign_keys
+            result[database].append(selected_table)
 
     schema = [{"name": database, "tables": tables} for database, tables in result.items()]
     return schema, invalid_tables
@@ -71,6 +91,10 @@ def make_prompt(question, schema, dialect):
     schema_lines = []
     for database in schema:
         schema_lines.append(f'Database: {database["name"]}')
+        selected_tables = {
+            table["name"].lower()
+            for table in database["tables"]
+        }
         for table in database["tables"]:
             column_types = table.get("column_types", [])
             columns = ", ".join(
@@ -78,6 +102,14 @@ def make_prompt(question, schema, dialect):
                 for index, column in enumerate(table["columns"])
             )
             schema_lines.append(f'{table["name"]}({columns})')
+            for column in table.get("primary_keys", []):
+                schema_lines.append(f'Primary key: {table["name"]}.{column}')
+            for foreign_key in table.get("foreign_keys", []):
+                if foreign_key["table"].lower() in selected_tables:
+                    schema_lines.append(
+                        f'Foreign key: {table["name"]}.{foreign_key["column"]} '
+                        f'-> {foreign_key["table"]}.{foreign_key["referenced_column"]}'
+                    )
 
     schema_text = "\n".join(schema_lines)
     return f"""You are given a database schema and a natural-language question.
@@ -237,48 +269,50 @@ def validate_row_alignment(prediction_rows, test_rows):
     """Fail on identifiable row mismatches; warn when only position is available."""
     rows_without_id = 0
     for index, (prediction_row, test_row) in enumerate(zip(prediction_rows, test_rows)):
-        prediction_key, prediction_id = _first_alignment_value(
-            prediction_row, ALIGNMENT_ID_KEYS
-        )
-        test_key, test_id = _first_alignment_value(test_row, ALIGNMENT_ID_KEYS)
-
-        if prediction_key is not None:
-            if test_key is not None:
-                expected = test_id
-                expected_key = test_key
+        has_usable_identifier = False
+        for prediction_key in ALIGNMENT_ID_KEYS:
+            if (
+                not isinstance(prediction_row, dict)
+                or prediction_row.get(prediction_key) is None
+            ):
+                continue
+            prediction_id = prediction_row[prediction_key]
+            if isinstance(test_row, dict) and test_row.get(prediction_key) is not None:
+                expected = test_row[prediction_key]
+                expected_key = prediction_key
             elif prediction_key in ALIGNMENT_INDEX_KEYS:
                 expected = index
                 expected_key = "test row index"
             else:
-                raise ValueError(
-                    f"Cannot validate prediction row {index}: it contains "
-                    f"{prediction_key}={prediction_id!r}, but the corresponding "
-                    "test row has no question/query ID"
-                )
+                continue
 
+            has_usable_identifier = True
             if str(prediction_id) != str(expected):
                 raise ValueError(
                     f"Prediction/test row alignment mismatch at row {index}: "
                     f"prediction {prediction_key}={prediction_id!r}, "
                     f"{expected_key}={expected!r}"
                 )
-        else:
-            rows_without_id += 1
 
         # Existing files often retain the question text rather than a separate ID.
-        prediction_key, prediction_question = _first_alignment_value(
-            prediction_row, ("question", "query")
-        )
-        test_key, test_question = _first_alignment_value(
-            test_row, ("question", "query")
-        )
-        if prediction_key is not None and test_key is not None:
-            if str(prediction_question).strip() != str(test_question).strip():
-                raise ValueError(
-                    f"Prediction/test row alignment mismatch at row {index}: "
-                    f"prediction {prediction_key}={prediction_question!r}, "
-                    f"test {test_key}={test_question!r}"
-                )
+        if not has_usable_identifier:
+            prediction_key, prediction_question = _first_alignment_value(
+                prediction_row, ("question", "query")
+            )
+            test_key, test_question = _first_alignment_value(
+                test_row, ("question", "query")
+            )
+            if prediction_key is not None and test_key is not None:
+                if str(prediction_question).strip() != str(test_question).strip():
+                    raise ValueError(
+                        f"Prediction/test row alignment mismatch at row {index}: "
+                        f"prediction {prediction_key}={prediction_question!r}, "
+                        f"test {test_key}={test_question!r}"
+                    )
+                has_usable_identifier = True
+
+        if not has_usable_identifier:
+            rows_without_id += 1
 
     if rows_without_id:
         print(
