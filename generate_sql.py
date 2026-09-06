@@ -112,24 +112,47 @@ def make_prompt(question, schema, dialect):
                     )
 
     schema_text = "\n".join(schema_lines)
+#     return f"""You are given a database schema and a natural-language question.
+
+# Generate a valid {dialect} SQL query that answers the question.
+
+# Rules:
+
+# - Use only the provided tables and columns.
+# - Do not invent table or column names.
+# - Use joins when multiple tables are required.
+# - Return only the SQL query without explanation.
+
+# Database schema:
+# {schema_text}
+
+# Question:
+# {question}
+
+# SQL:"""
     return f"""You are given a database schema and a natural-language question.
 
-Generate a valid {dialect} SQL query that answers the question.
+    Generate a valid {dialect} SQL query that answers the question.
 
-Rules:
+    Rules:
 
-- Use only the provided tables and columns.
-- Do not invent table or column names.
-- Use joins when multiple tables are required.
-- Return only the SQL query without explanation.
+    - Identify the tables and columns needed to answer the question.
+    - Use only the provided tables and columns. Do not invent table or column names.
+    - Use explicit JOIN ... ON when multiple tables are required.
+    - Do not use SELECT *. If the question requests specific attributes, explicitly select those attributes.
+      If the question asks for information, details, or records about an entity without specifying particular attributes, 
+      explicitly list all columns of that entity in the order shown in the schema.
+      Tables used only for joins should not contribute output columns unless their information is also requested.
+    - Apply filtering, grouping, aggregation, ordering, and limits as required by the question.
+    - Return only the SQL query without explanation.
 
-Database schema:
-{schema_text}
+    Database schema:
+    {schema_text}
 
-Question:
-{question}
+    Question:
+    {question}
 
-SQL:"""
+    SQL:"""
 
 
 def extract_sql(text):
