@@ -20,14 +20,16 @@
   ],
   [
     "csail_stata_nova#sep#compute_nodes",
-    "csail_stata_nova#sep#shadow_instances"
+    "csail_stata_nova#sep#shadow_instances",
+    "csail_stata_nova#sep#shadow_instance_extra"
   ],
   [
     "csail_stata_nova#sep#compute_nodes",
     "csail_stata_nova#sep#shadow_instances"
   ],
   [
-    "csail_stata_nova#sep#reservations"
+    "csail_stata_nova#sep#reservations",
+    "csail_stata_cinder#sep#reservations"
   ],
   [
     "csail_stata_neutron#sep#ports",
@@ -43,7 +45,8 @@
   ],
   [
     "csail_stata_nova#sep#compute_nodes",
-    "csail_stata_nova#sep#instances"
+    "csail_stata_nova#sep#instances",
+    "csail_stata_nova#sep#instance_info_caches"
   ],
   [
     "csail_stata_neutron#sep#ports",
@@ -56,7 +59,9 @@
   [
     "csail_stata_nova#sep#instance_info_caches",
     "csail_stata_nova#sep#compute_nodes",
-    "csail_stata_nova#sep#shadow_instance_extra"
+    "csail_stata_nova#sep#shadow_instance_extra",
+    "csail_stata_nova#sep#shadow_instance_info_caches",
+    "csail_stata_nova#sep#instances"
   ],
   [
     "csail_stata_neutron#sep#ports",
@@ -69,12 +74,15 @@
   ],
   [
     "csail_stata_nova#sep#shadow_migrations",
-    "csail_stata_nova#sep#shadow_instances"
+    "csail_stata_nova#sep#shadow_instances",
+    "csail_stata_nova#sep#shadow_instance_extra",
+    "csail_stata_nova#sep#migrations"
   ],
   [
     "csail_stata_nova#sep#networks",
     "csail_stata_neutron#sep#networks",
-    "csail_stata_neutron#sep#ml2_network_segments"
+    "csail_stata_neutron#sep#ml2_network_segments",
+    "csail_stata_neutron#sep#subnets"
   ],
   [
     "csail_stata_neutron#sep#subnets",
@@ -83,7 +91,8 @@
   ],
   [
     "csail_stata_nova#sep#instance_info_caches",
-    "csail_stata_nova#sep#shadow_instance_info_caches"
+    "csail_stata_nova#sep#shadow_instance_info_caches",
+    "csail_stata_nova#sep#shadow_instance_extra"
   ],
   [
     "csail_stata_nova#sep#shadow_migrations",
@@ -111,7 +120,8 @@
   ],
   [
     "csail_stata_nova#sep#instance_info_caches",
-    "csail_stata_nova#sep#shadow_instance_extra"
+    "csail_stata_nova#sep#shadow_instance_extra",
+    "csail_stata_nova#sep#shadow_instance_info_caches"
   ],
   [
     "csail_stata_neutron#sep#subnets",
@@ -126,7 +136,8 @@
   ],
   [
     "csail_stata_nova#sep#instance_info_caches",
-    "csail_stata_nova#sep#shadow_instance_info_caches"
+    "csail_stata_nova#sep#shadow_instance_info_caches",
+    "csail_stata_nova#sep#instances"
   ],
   [
     "csail_stata_nova#sep#instance_info_caches",
@@ -136,7 +147,8 @@
     "csail_stata_nova#sep#instance_info_caches",
     "csail_stata_nova#sep#shadow_instance_info_caches",
     "csail_stata_nova#sep#shadow_instance_system_metadata",
-    "csail_stata_nova#sep#instance_metadata"
+    "csail_stata_nova#sep#instance_metadata",
+    "csail_stata_nova#sep#shadow_instance_extra"
   ],
   [
     "csail_stata_nova#sep#instance_info_caches",
@@ -151,7 +163,8 @@
     "csail_stata_nova#sep#instance_info_caches",
     "csail_stata_nova#sep#shadow_instance_system_metadata",
     "csail_stata_nova#sep#compute_nodes",
-    "csail_stata_nova#sep#shadow_instance_info_caches"
+    "csail_stata_nova#sep#shadow_instance_info_caches",
+    "csail_stata_nova#sep#instances"
   ],
   [
     "csail_stata_neutron#sep#ml2_brocadeports",
@@ -165,7 +178,8 @@
   [
     "csail_stata_nova#sep#shadow_instance_extra",
     "csail_stata_nova#sep#instance_info_caches",
-    "csail_stata_nova#sep#shadow_instance_system_metadata"
+    "csail_stata_nova#sep#shadow_instance_system_metadata",
+    "csail_stata_nova#sep#instances"
   ],
   [
     "csail_stata_neutron#sep#ports",
@@ -176,12 +190,14 @@
     "csail_stata_nova#sep#shadow_migrations"
   ],
   [
-    "csail_stata_neutron#sep#ports"
+    "csail_stata_neutron#sep#ports",
+    "csail_stata_neutron#sep#securitygroupportbindings"
   ],
   [
     "csail_stata_nova#sep#instance_info_caches",
     "csail_stata_neutron#sep#securitygrouprules",
-    "csail_stata_nova#sep#shadow_instance_info_caches"
+    "csail_stata_nova#sep#shadow_instance_info_caches",
+    "csail_stata_nova#sep#shadow_instance_extra"
   ],
   [
     "csail_stata_nova#sep#instance_info_caches",
@@ -205,7 +221,8 @@
   [
     "csail_stata_nova#sep#instance_info_caches",
     "csail_stata_nova#sep#shadow_instance_info_caches",
-    "csail_stata_nova#sep#security_group_instance_association"
+    "csail_stata_nova#sep#security_group_instance_association",
+    "csail_stata_nova#sep#shadow_instance_extra"
   ],
   [
     "csail_stata_neutron#sep#ports",
@@ -218,16 +235,19 @@
   ],
   [
     "keystone#sep#federated_user",
-    "keystone#sep#local_user"
+    "keystone#sep#local_user",
+    "keystone#sep#user"
   ],
   [
     "keystone#sep#local_user",
-    "keystone#sep#domain"
+    "keystone#sep#domain",
+    "keystone#sep#user"
   ],
   [
     "csail_stata_nova#sep#instance_info_caches",
     "csail_stata_nova#sep#instance_metadata",
-    "csail_stata_nova#sep#shadow_instance_system_metadata"
+    "csail_stata_nova#sep#shadow_instance_system_metadata",
+    "csail_stata_nova#sep#instance_system_metadata"
   ],
   [
     "csail_stata_neutron#sep#networkrbacs",
@@ -236,7 +256,8 @@
   [
     "csail_stata_neutron#sep#subnets",
     "csail_stata_neutron#sep#networkrbacs",
-    "csail_stata_neutron#sep#securitygrouprules"
+    "csail_stata_neutron#sep#securitygrouprules",
+    "csail_stata_neutron#sep#subnetroutes"
   ],
   [
     "csail_stata_nova#sep#services",
@@ -296,7 +317,8 @@
   ],
   [
     "csail_stata_neutron#sep#flavors",
-    "csail_stata_nova#sep#instance_types"
+    "csail_stata_nova#sep#instance_types",
+    "csail_stata_nova#sep#instance_type_projects"
   ],
   [
     "csail_stata_cinder#sep#volume_type_projects",
@@ -308,7 +330,8 @@
     "csail_stata_glance#sep#images",
     "csail_stata_glance#sep#image_locations",
     "csail_stata_glance#sep#image_tags",
-    "csail_stata_nova#sep#s3_images"
+    "csail_stata_nova#sep#s3_images",
+    "csail_stata_glance#sep#image_members"
   ],
   [
     "csail_stata_glance#sep#images",
@@ -318,7 +341,8 @@
   [
     "csail_stata_nova#sep#instance_info_caches",
     "csail_stata_nova#sep#shadow_instance_system_metadata",
-    "csail_stata_nova#sep#shadow_instance_info_caches"
+    "csail_stata_nova#sep#shadow_instance_info_caches",
+    "csail_stata_nova#sep#shadow_instance_extra"
   ],
   [
     "csail_stata_nova#sep#aggregate_hosts",
@@ -336,7 +360,8 @@
   [
     "csail_stata_nova#sep#networks",
     "csail_stata_neutron#sep#ml2_network_segments",
-    "csail_stata_neutron#sep#subnets"
+    "csail_stata_neutron#sep#subnets",
+    "csail_stata_neutron#sep#networks"
   ],
   [
     "csail_stata_cinder#sep#volume_type_projects",
@@ -345,7 +370,8 @@
   [
     "csail_stata_neutron#sep#subnetroutes",
     "csail_stata_neutron#sep#subnets",
-    "csail_stata_neutron#sep#networks"
+    "csail_stata_neutron#sep#networks",
+    "csail_stata_neutron#sep#ml2_network_segments"
   ],
   [
     "csail_stata_neutron#sep#subnets",
@@ -364,12 +390,14 @@
   [
     "csail_stata_neutron#sep#subnets",
     "csail_stata_neutron#sep#networkrbacs",
-    "csail_stata_neutron#sep#subnetroutes"
+    "csail_stata_neutron#sep#subnetroutes",
+    "csail_stata_neutron#sep#networks"
   ],
   [
     "csail_stata_neutron#sep#networkrbacs",
     "csail_stata_neutron#sep#securitygrouprules",
-    "csail_stata_neutron#sep#networks"
+    "csail_stata_neutron#sep#networks",
+    "csail_stata_neutron#sep#networksecuritybindings"
   ],
   [
     "keystone#sep#federated_user",
@@ -400,6 +428,7 @@
   [
     "csail_stata_neutron#sep#subnets",
     "csail_stata_neutron#sep#subnetroutes",
-    "csail_stata_neutron#sep#networks"
+    "csail_stata_neutron#sep#networks",
+    "csail_stata_neutron#sep#ml2_network_segments"
   ]
 ]

@@ -8,7 +8,8 @@
   [
     "dw#sep#subject_iap_schedule",
     "dw#sep#academic_terms_all",
-    "dw#sep#academic_terms"
+    "dw#sep#academic_terms",
+    "dw#sep#academic_term_parameter"
   ],
   [
     "dw#sep#library_course_instructor",
@@ -38,20 +39,26 @@
   ],
   [
     "dw#sep#fclt_building_hist",
-    "dw#sep#buildings"
+    "dw#sep#buildings",
+    "dw#sep#fac_building",
+    "dw#sep#fclt_building_address_hist"
   ],
   [
     "dw#sep#fclt_building_hist_1",
     "dw#sep#fclt_building_hist",
-    "dw#sep#fclt_building"
+    "dw#sep#fclt_building",
+    "dw#sep#fac_building"
   ],
   [
     "dw#sep#fac_building",
-    "dw#sep#fclt_building"
+    "dw#sep#fclt_building",
+    "dw#sep#fclt_building_hist_1"
   ],
   [
     "dw#sep#buildings",
-    "dw#sep#fclt_floor"
+    "dw#sep#fclt_floor",
+    "dw#sep#fac_building_address",
+    "dw#sep#fac_floor"
   ],
   [
     "dw#sep#iap_subject_category",
@@ -66,7 +73,8 @@
   [
     "dw#sep#iap_subject_detail",
     "dw#sep#iap_subject_person",
-    "dw#sep#subject_iap_schedule"
+    "dw#sep#subject_iap_schedule",
+    "dw#sep#iap_subject_category"
   ],
   [
     "dw#sep#iap_subject_detail",
@@ -76,12 +84,14 @@
   [
     "dw#sep#iap_subject_session",
     "dw#sep#subject_iap_schedule",
-    "dw#sep#iap_subject_detail"
+    "dw#sep#iap_subject_detail",
+    "dw#sep#iap_subject_category"
   ],
   [
     "dw#sep#iap_subject_session",
     "dw#sep#iap_subject_detail",
-    "dw#sep#subject_iap_schedule"
+    "dw#sep#subject_iap_schedule",
+    "dw#sep#iap_subject_category"
   ],
   [
     "dw#sep#student_department",
@@ -95,7 +105,8 @@
   [
     "dw#sep#sis_subject_code",
     "dw#sep#sis_course_description",
-    "dw#sep#sis_department"
+    "dw#sep#sis_department",
+    "dw#sep#subject_offered_summary"
   ],
   [
     "dw#sep#space_detail",
@@ -117,7 +128,8 @@
   [
     "dw#sep#subject_offered_summary",
     "dw#sep#library_subject_offered",
-    "dw#sep#academic_terms"
+    "dw#sep#academic_terms",
+    "dw#sep#academic_terms_all"
   ],
   [
     "dw#sep#iap_subject_session",
@@ -129,12 +141,14 @@
   [
     "dw#sep#sis_subject_code",
     "dw#sep#sis_course_description",
-    "dw#sep#sis_department"
+    "dw#sep#sis_department",
+    "dw#sep#subject_offered_summary"
   ],
   [
     "dw#sep#cis_course_catalog",
     "dw#sep#sis_course_description",
-    "dw#sep#academic_terms"
+    "dw#sep#academic_terms",
+    "dw#sep#course_catalog_subject_offered"
   ],
   [
     "dw#sep#subject_summary",
@@ -149,7 +163,8 @@
   [
     "dw#sep#library_material_status",
     "dw#sep#tip_material_status",
-    "dw#sep#subject_offered_summary"
+    "dw#sep#subject_offered_summary",
+    "dw#sep#subject_summary"
   ],
   [
     "dw#sep#tip_detail",
@@ -181,7 +196,8 @@
   ],
   [
     "dw#sep#cis_course_catalog",
-    "dw#sep#drupal_course_catalog"
+    "dw#sep#drupal_course_catalog",
+    "dw#sep#academic_terms"
   ],
   [
     "dw#sep#fclt_rooms",
@@ -202,23 +218,27 @@
   [
     "dw#sep#fac_building",
     "dw#sep#fclt_building_hist",
-    "dw#sep#buildings"
+    "dw#sep#buildings",
+    "dw#sep#fclt_building_hist_1"
   ],
   [
     "dw#sep#library_subject_offered",
     "dw#sep#subject_offered_summary",
-    "dw#sep#course_catalog_subject_offered"
+    "dw#sep#course_catalog_subject_offered",
+    "dw#sep#subject_summary"
   ],
   [
     "dw#sep#sis_subject_code",
     "dw#sep#subject_summary",
-    "dw#sep#academic_terms_all"
+    "dw#sep#academic_terms_all",
+    "dw#sep#subject_attribute"
   ],
   [
     "dw#sep#buildings",
     "dw#sep#fac_building_address",
     "dw#sep#fclt_building_address",
-    "dw#sep#space_detail"
+    "dw#sep#space_detail",
+    "dw#sep#fclt_building_address_hist"
   ],
   [
     "dw#sep#cip_with_version",
@@ -228,13 +248,15 @@
   [
     "dw#sep#library_subject_offered",
     "dw#sep#library_reserve_matrl_detail",
-    "dw#sep#tip_material"
+    "dw#sep#tip_material",
+    "dw#sep#library_material_status"
   ],
   [
     "dw#sep#library_reserve_matrl_detail",
     "dw#sep#library_reserve_catalog",
     "dw#sep#library_course_instructor",
-    "dw#sep#library_subject_offered"
+    "dw#sep#library_subject_offered",
+    "dw#sep#library_material_status"
   ],
   [
     "dw#sep#library_material_status",
@@ -293,7 +315,8 @@
   [
     "dw#sep#hr_faculty_roster",
     "dw#sep#subject_offered_summary",
-    "dw#sep#subject_grouping"
+    "dw#sep#subject_grouping",
+    "dw#sep#library_subject_offered"
   ],
   [
     "dw#sep#mit_student_directory",
@@ -331,7 +354,8 @@
   [
     "dw#sep#course_catalog_subject_offered",
     "dw#sep#subject_offered_summary",
-    "dw#sep#subject_offered"
+    "dw#sep#subject_offered",
+    "dw#sep#library_subject_offered"
   ],
   [
     "dw#sep#cis_hass_attribute",
@@ -417,12 +441,14 @@
   ],
   [
     "dw#sep#buildings",
-    "dw#sep#fac_building"
+    "dw#sep#fac_building",
+    "dw#sep#fac_building_address"
   ],
   [
     "dw#sep#fclt_building_hist",
     "dw#sep#fclt_building",
-    "dw#sep#fclt_major_use_hist"
+    "dw#sep#fclt_major_use_hist",
+    "dw#sep#fclt_building_hist_1"
   ],
   [
     "dw#sep#buildings",
@@ -433,7 +459,8 @@
     "dw#sep#fac_organization",
     "dw#sep#fclt_building_hist",
     "dw#sep#fclt_building",
-    "dw#sep#hr_org_unit"
+    "dw#sep#hr_org_unit",
+    "dw#sep#fclt_rooms"
   ],
   [
     "dw#sep#fac_major_use",
@@ -487,7 +514,8 @@
   [
     "dw#sep#library_subject_offered",
     "dw#sep#time_day",
-    "dw#sep#academic_terms"
+    "dw#sep#academic_terms",
+    "dw#sep#academic_terms_all"
   ],
   [
     "dw#sep#library_subject_offered",
@@ -518,7 +546,9 @@
   [
     "dw#sep#subject_summary",
     "dw#sep#library_subject_offered",
-    "dw#sep#academic_terms"
+    "dw#sep#academic_terms",
+    "dw#sep#academic_terms_all",
+    "dw#sep#subject_offered_summary"
   ],
   [
     "dw#sep#iap_subject_session",
@@ -527,7 +557,9 @@
   ],
   [
     "dw#sep#academic_terms",
-    "dw#sep#subject_summary"
+    "dw#sep#subject_summary",
+    "dw#sep#academic_term_parameter",
+    "dw#sep#academic_terms_all"
   ],
   [
     "dw#sep#moira_list",
@@ -551,7 +583,8 @@
     "dw#sep#fclt_rooms",
     "dw#sep#fac_major_use",
     "dw#sep#fclt_major_use",
-    "dw#sep#fac_rooms"
+    "dw#sep#fac_rooms",
+    "dw#sep#fac_building"
   ],
   [
     "dw#sep#buildings",
@@ -570,7 +603,8 @@
   [
     "dw#sep#library_subject_offered",
     "dw#sep#tip_material",
-    "dw#sep#library_reserve_matrl_detail"
+    "dw#sep#library_reserve_matrl_detail",
+    "dw#sep#library_material_status"
   ],
   [
     "dw#sep#library_course_instructor",
@@ -602,11 +636,14 @@
   [
     "dw#sep#buildings",
     "dw#sep#fclt_building_hist",
-    "dw#sep#fclt_floor"
+    "dw#sep#fclt_floor",
+    "dw#sep#fclt_building_address"
   ],
   [
     "dw#sep#course_catalog_subject_offered",
-    "dw#sep#subject_offered_summary"
+    "dw#sep#subject_offered_summary",
+    "dw#sep#subject_summary",
+    "dw#sep#library_subject_offered"
   ],
   [
     "dw#sep#moira_list",
@@ -621,6 +658,7 @@
   [
     "dw#sep#sis_admin_department",
     "dw#sep#student_department",
-    "dw#sep#mit_student_directory"
+    "dw#sep#mit_student_directory",
+    "dw#sep#sis_department"
   ]
 ]

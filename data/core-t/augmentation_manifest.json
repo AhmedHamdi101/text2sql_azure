@@ -62,54 +62,60 @@
       "k": 5,
       "source": "/export/bayan_Text2SQL/core-t/results-paper-reported/beaver_dw/huggingface_Qwen_Qwen2_5_7B_Instruct_huggingface_WhereIsAI_UAE_Large_V1/results_table_augmentation/k_5/augmented_tables.json",
       "destination": "/export/bayan_Text2SQL/text2sql_azure/data/core-t/beaver_dw/k_5.json",
-      "sha256": "cb93973600b99c1cda21df82d14363b62bba6360986dd8171349625ae1261083",
+      "sha256": "f4aaa58ca8cf28f317bf33ca97def5d0a849318a67f2727964cb685cbd241a79",
       "queries": 121,
-      "changed_rows": 0
+      "changed_rows": 33,
+      "comparison_basis": "previous SQL input backed up at /export/bayan_Text2SQL/text2sql_azure/backups/core-t-beaver-before-cache-fix-20260906T205409Z/beaver_dw/k_5.json"
     },
     {
       "dataset": "beaver_dw",
       "k": 10,
       "source": "/export/bayan_Text2SQL/core-t/results-paper-reported/beaver_dw/huggingface_Qwen_Qwen2_5_7B_Instruct_huggingface_WhereIsAI_UAE_Large_V1/results_table_augmentation/k_10/augmented_tables.json",
       "destination": "/export/bayan_Text2SQL/text2sql_azure/data/core-t/beaver_dw/k_10.json",
-      "sha256": "9f0c84c78c2085d13d92d815499a7cd95eb5b1a810a1cc4577df342fab3a55e1",
+      "sha256": "fe682822e936ea2f308a6e0ee13c4c1d5dbd51207309a3be874ddaf12064e172",
       "queries": 121,
-      "changed_rows": 0
+      "changed_rows": 63,
+      "comparison_basis": "previous SQL input backed up at /export/bayan_Text2SQL/text2sql_azure/backups/core-t-beaver-before-cache-fix-20260906T205409Z/beaver_dw/k_10.json"
     },
     {
       "dataset": "beaver_dw",
       "k": 15,
       "source": "/export/bayan_Text2SQL/core-t/results-paper-reported/beaver_dw/huggingface_Qwen_Qwen2_5_7B_Instruct_huggingface_WhereIsAI_UAE_Large_V1/results_table_augmentation/k_15/augmented_tables.json",
       "destination": "/export/bayan_Text2SQL/text2sql_azure/data/core-t/beaver_dw/k_15.json",
-      "sha256": "34fb37b5f155dd69f39ed1a7256f08e5bf76127c247c1fc5e61d22e2821225a4",
+      "sha256": "e4cda833b653d06f87e1a4ca89cd0ba7d7ef5663233019d514723e1cfd543519",
       "queries": 121,
-      "changed_rows": 0
+      "changed_rows": 73,
+      "comparison_basis": "previous SQL input backed up at /export/bayan_Text2SQL/text2sql_azure/backups/core-t-beaver-before-cache-fix-20260906T205409Z/beaver_dw/k_15.json"
     },
     {
       "dataset": "beaver_nw",
       "k": 5,
       "source": "/export/bayan_Text2SQL/core-t/results-paper-reported/beaver_nw/huggingface_Qwen_Qwen2_5_7B_Instruct_huggingface_WhereIsAI_UAE_Large_V1/results_table_augmentation/k_5/augmented_tables.json",
       "destination": "/export/bayan_Text2SQL/text2sql_azure/data/core-t/beaver_nw/k_5.json",
-      "sha256": "7919e0ae22548aca7fab4399509fdd35713d8cd73a6e6fb4b2f3e0ce1435227c",
+      "sha256": "b45197b7d8fadde16da0a78d90da639f4d75f1fe9b5209c59942b1c72246c087",
       "queries": 88,
-      "changed_rows": 0
+      "changed_rows": 27,
+      "comparison_basis": "previous SQL input backed up at /export/bayan_Text2SQL/text2sql_azure/backups/core-t-beaver-before-cache-fix-20260906T205409Z/beaver_nw/k_5.json"
     },
     {
       "dataset": "beaver_nw",
       "k": 10,
       "source": "/export/bayan_Text2SQL/core-t/results-paper-reported/beaver_nw/huggingface_Qwen_Qwen2_5_7B_Instruct_huggingface_WhereIsAI_UAE_Large_V1/results_table_augmentation/k_10/augmented_tables.json",
       "destination": "/export/bayan_Text2SQL/text2sql_azure/data/core-t/beaver_nw/k_10.json",
-      "sha256": "5365a0fcf97fe3fa0237727254c38444d6284b22fb6f10110ab92dd5f0189ee5",
+      "sha256": "afe44f6fcd9d7a3f60e50b4fd3a9124380527ccbbb15d724eb0c8baf0a0c9640",
       "queries": 88,
-      "changed_rows": 0
+      "changed_rows": 50,
+      "comparison_basis": "previous SQL input backed up at /export/bayan_Text2SQL/text2sql_azure/backups/core-t-beaver-before-cache-fix-20260906T205409Z/beaver_nw/k_10.json"
     },
     {
       "dataset": "beaver_nw",
       "k": 15,
       "source": "/export/bayan_Text2SQL/core-t/results-paper-reported/beaver_nw/huggingface_Qwen_Qwen2_5_7B_Instruct_huggingface_WhereIsAI_UAE_Large_V1/results_table_augmentation/k_15/augmented_tables.json",
       "destination": "/export/bayan_Text2SQL/text2sql_azure/data/core-t/beaver_nw/k_15.json",
-      "sha256": "0bcf33ca9d6e8947b090087a3426030c4d516d802464893703e3fe3377b6510a",
+      "sha256": "14787cab6c4f565b53acf0653388d92cdf896999e77ce4e473b4dd9977b20562",
       "queries": 88,
-      "changed_rows": 0
+      "changed_rows": 56,
+      "comparison_basis": "previous SQL input backed up at /export/bayan_Text2SQL/text2sql_azure/backups/core-t-beaver-before-cache-fix-20260906T205409Z/beaver_nw/k_15.json"
     }
   ],
   "bird_question_text_mismatch_indices": [
@@ -223,5 +229,14 @@
     1516,
     1528
   ],
-  "bird_question_text_mismatch_note": "Pre-existing source/destination dataset version difference; row order preserved from selector inputs."
+  "bird_question_text_mismatch_note": "Pre-existing source/destination dataset version difference; row order preserved from selector inputs.",
+  "updated_utc": "2026-09-06T20:54:30.295889+00:00",
+  "beaver_cache_fix": {
+    "previous_inputs_backup": "/export/bayan_Text2SQL/text2sql_azure/backups/core-t-beaver-before-cache-fix-20260906T205409Z",
+    "datasets": [
+      "beaver_dw",
+      "beaver_nw"
+    ],
+    "note": "Refreshed from augmentation reruns using the populated fireworks-tagged UAE compatibility cache."
+  }
 }
