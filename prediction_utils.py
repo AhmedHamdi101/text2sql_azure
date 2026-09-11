@@ -61,26 +61,20 @@ def value_at_k(value, k):
     return []
 
 
-def explicit_database(row):
-    """Explicit DB fields recognized by the Ours metrics loader."""
-    for key in (
-        "pred_db", "db_pred", "predicted_db", "pred_database",
-        "database_pred", "top_db", "db",
-    ):
-        if row.get(key) is not None:
-            value = row[key]
-            if isinstance(value, list):
-                value = value[0] if value else None
-            if isinstance(value, dict):
-                value = next(
-                    (value.get(x) for x in ("db_id", "database", "db", "name") if value.get(x)),
-                    None,
-                )
-            return normalize(value) or None
-    return None
-
-
 def load_ours(row, k):
+    predicted_databases = row.get("pred_dbs_by_k")
+    if not isinstance(predicted_databases, dict):
+        raise ValueError(
+            "Ours predictions must contain a 'pred_dbs_by_k' mapping; "
+            f"cannot select a database for K={k}."
+        )
+    databases = predicted_databases.get(str(k), predicted_databases.get(k))
+    if not isinstance(databases, list) or not databases or not normalize(databases[0]):
+        raise ValueError(
+            "Ours predictions must contain a non-empty "
+            f"'pred_dbs_by_k[{k!r}]' list."
+        )
+
     for key in (
         "pred_table_ids_by_k", "table_ids_by_k", "tables_ranked_ids_by_k",
         "predicted_table_ids_by_k", "tables_ranked_by_k", "tables_by_k",
@@ -101,7 +95,7 @@ def load_ours(row, k):
             [],
         )
 
-    database = explicit_database(row)
+    database = normalize(databases[0])
     table_ids = []
     for value in tables[:k]:
         table_db, table = split_table_id(value)
@@ -161,9 +155,10 @@ def load_predictions(path, method, k):
         elif method == "iterjar":
             database, table_ids = None, normalize_table_list(row)[:k]
         elif method == "core-t":
-            # CORE-T's metric loader preserves duplicates until after DB voting.
+            # K identifies the run; preserve the full final augmented set.
+            # Duplicates remain present until after database voting.
             database = None
-            table_ids = [str(value) for value in row if str(value).strip()][:k] if isinstance(row, list) else []
+            table_ids = [str(value) for value in row if str(value).strip()] if isinstance(row, list) else []
         elif method == "qgpt":
             database, table_ids = load_qgpt(row if isinstance(row, dict) else {}, k)
         else:
