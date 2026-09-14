@@ -87,6 +87,91 @@ def selected_schema(pairs, all_schemas):
     return schema, invalid_tables
 
 
+def oracle_prediction(example):
+    """Build a pipeline-compatible prediction from an example's gold schema."""
+    oracle_schema = example.get("schema")
+    if not isinstance(oracle_schema, dict):
+        raise ValueError("Oracle-schema mode requires each test row to contain a schema object")
+    database = oracle_schema.get("database")
+    metadata = oracle_schema.get("metadata")
+    if not isinstance(database, str) or not database.strip():
+        raise ValueError("Oracle-schema mode requires schema.database")
+    if not isinstance(metadata, list):
+        raise ValueError("Oracle-schema mode requires schema.metadata to be a list")
+
+    tables = []
+    for table in metadata:
+        if not isinstance(table, dict) or not isinstance(table.get("name"), str):
+            raise ValueError("Oracle-schema metadata entries require a table name")
+        name = table["name"]
+        if name not in tables:
+            tables.append(name)
+    table_ids = [f"{database}#sep#{table}" for table in tables]
+    return {
+        "database": database,
+        "retrieved_table_ids": table_ids,
+        "table_ids": table_ids,
+        "tables": tables,
+    }
+
+
+def selected_oracle_schema(example, all_schemas):
+    """Select GT tables with their complete canonical schemas.
+
+    Oracle mode is a table-retrieval upper bound: it supplies every column of
+    each GT table, exactly as the retrieval methods do for predicted tables.
+    """
+    oracle_schema = example["schema"]
+    database_names = {name.lower(): name for name in all_schemas}
+    requested_database = oracle_schema["database"]
+    database = database_names.get(requested_database.lower())
+    if database is None:
+        raise ValueError(
+            f"Oracle database not found in schemas.json: {requested_database}"
+        )
+
+    canonical_tables = all_schemas[database]
+    selected_tables = []
+    invalid_tables = []
+    for requested_table in oracle_schema["metadata"]:
+        table_name = requested_table["name"]
+        table = next(
+            (item for item in canonical_tables if item["name"].lower() == table_name.lower()),
+            None,
+        )
+        if table is None:
+            invalid_tables.append(table_name)
+            continue
+
+        columns = []
+        column_types = []
+        primary_keys = []
+        foreign_keys = []
+        for column in table.get("columns", []):
+            if not isinstance(column, dict) or not isinstance(column.get("name"), str):
+                continue
+            columns.append(column["name"])
+            column_types.append(str(column.get("type") or "unknown"))
+            if column.get("primary_key"):
+                primary_keys.append(column["name"])
+            foreign_key = column.get("foreign_key")
+            if isinstance(foreign_key, dict) and foreign_key.get("table") and foreign_key.get("column"):
+                foreign_keys.append({
+                    "column": column["name"],
+                    "table": foreign_key["table"],
+                    "referenced_column": foreign_key["column"],
+                })
+        selected_tables.append({
+            "name": table["name"],
+            "columns": columns,
+            "column_types": column_types,
+            "primary_keys": primary_keys,
+            "foreign_keys": foreign_keys,
+        })
+
+    return [{"name": database, "tables": selected_tables}], invalid_tables
+
+
 def make_prompt(question, schema, dialect):
     schema_lines = []
     for database in schema:
@@ -348,8 +433,8 @@ def validate_row_alignment(prediction_rows, test_rows):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--method", required=True, choices=["Ours", "DBCopilot", "IterJar", "Core-t", "QGpT"])
-    parser.add_argument("--predictions", required=True, type=Path)
+    parser.add_argument("--method", required=True, choices=["Ours", "DBCopilot", "IterJar", "Core-t", "QGpT", "Oracle-schema"])
+    parser.add_argument("--predictions", type=Path)
     parser.add_argument("--test", required=True, type=Path, help="DBCopilot-format test.json")
     parser.add_argument("--schemas", required=True, type=Path, help="DBCopilot-format schemas.json")
     parser.add_argument("--output", required=True, type=Path, help="Output .jsonl file")
@@ -369,13 +454,18 @@ def main():
     )
     args = parser.parse_args()
 
-    prediction_rows = json.loads(args.predictions.read_text())
-    predictions = load_predictions(args.predictions, args.method, args.top_k)
     test = json.loads(args.test.read_text())
     schemas = json.loads(args.schemas.read_text())
-    if len(predictions) != len(test):
-        raise ValueError(f"Predictions and test data have different lengths: {len(predictions)} != {len(test)}")
-    validate_row_alignment(prediction_rows, test)
+    if args.method == "Oracle-schema":
+        predictions = [oracle_prediction(example) for example in test]
+    else:
+        if args.predictions is None:
+            parser.error("--predictions is required unless --method Oracle-schema is used")
+        prediction_rows = json.loads(args.predictions.read_text())
+        predictions = load_predictions(args.predictions, args.method, args.top_k)
+        if len(predictions) != len(test):
+            raise ValueError(f"Predictions and test data have different lengths: {len(predictions)} != {len(test)}")
+        validate_row_alignment(prediction_rows, test)
 
     client = None
     if not args.dry_run:
@@ -417,11 +507,14 @@ def main():
                     f"(predicted database: {prediction['database']})"
                 )
                 continue
-            pairs = [
-                (prediction["database"], table)
-                for table in prediction["tables"]
-            ]
-            schema, invalid_predicted_tables = selected_schema(pairs, schemas)
+            if args.method == "Oracle-schema":
+                schema, invalid_predicted_tables = selected_oracle_schema(example, schemas)
+            else:
+                pairs = [
+                    (prediction["database"], table)
+                    for table in prediction["tables"]
+                ]
+                schema, invalid_predicted_tables = selected_schema(pairs, schemas)
             num_valid_tables = sum(
                 len(database["tables"])
                 for database in schema

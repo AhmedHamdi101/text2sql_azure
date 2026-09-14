@@ -19,6 +19,7 @@ case "$METHOD" in
     iterjar) SCRIPT=iterjar.sh;;
     core-t) SCRIPT=core_t.sh;;
     qgpt) SCRIPT=qgpt.sh;;
+    oracle-schema|orcale-schema) SCRIPT=oracle_schema.sh;;
     *)
         echo "Unknown method: $METHOD" >&2
         exit 2

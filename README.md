@@ -1,12 +1,13 @@
 # Text-to-SQL generation
 
-This directory generates SQL from the schema-retrieval predictions of five methods:
+This directory generates SQL from the schema-retrieval predictions of six methods:
 
 - Ours
 - DBCopilot
 - IterJAR
 - CORE-T
 - QGpT
+- Oracle-schema (the ground-truth table/column upper bound)
 
 The retrieval predictions are normalized using the same database selection and table handling used by the shared metrics evaluation. The selected schema is then placed in a prompt and, unless dry-run mode is enabled, sent to an Azure AI Foundry model.
 
@@ -44,7 +45,10 @@ dbcopilot
 iterjar
 core-t
 qgpt
+oracle-schema
 ```
+
+`orcale-schema` is also accepted as a compatibility alias for `oracle-schema`.
 
 Method names passed to `main.sh` are converted to lowercase. When calling `generate_sql.py` directly, use the exact spelling accepted by its CLI:
 
@@ -177,6 +181,31 @@ dry_run_outputs/ours/bird/ours_top5.jsonl
 dry_run_outputs/ours/bird/ours_top10.jsonl
 dry_run_outputs/ours/bird/ours_top15.jsonl
 ```
+
+## Oracle-schema run
+
+Oracle-schema mode uses each test example's `schema.metadata` table names
+directly. It supplies the complete canonical schema for those GT tables, just
+as the retrieval methods supply every column of their retrieved tables. It runs
+once per dataset because top-K does not apply:
+
+```bash
+bash local_script/main.sh MODEL oracle-schema DATASET
+```
+
+For a no-API prompt validation run:
+
+```bash
+bash local_script/main.sh no-api oracle-schema bird --dry-run
+```
+
+Its result is written to:
+
+```text
+outputs/<model>/<dataset>/oracle-schema.jsonl
+```
+
+or `dry_run_outputs/oracle-schema/<dataset>/oracle-schema.jsonl` for dry runs.
 
 ## Run locally with the API
 

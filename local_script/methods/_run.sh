@@ -57,6 +57,19 @@ else
 fi
 mkdir -p "$PROJECT_ROOT/logs" "$OUTPUT_DIR"
 
+if [[ "$METHOD" == "Oracle-schema" ]]; then
+    OUTPUT="$OUTPUT_DIR/oracle-schema.jsonl"
+    "$CONDA_BIN" run -n text2sql_llm \
+        python "$PROJECT_ROOT/generate_sql.py" \
+        --method "$METHOD" \
+        --test "$DATA_DIR/test.json" \
+        --schemas "$DATA_DIR/schemas.json" \
+        --output "$OUTPUT" \
+        --dialect "$DIALECT" \
+        "${EXTRA_ARGS[@]}"
+    exit 0
+fi
+
 for TOP_K in "${TOP_K_VALUES[@]}"; do
     PREDICTIONS=${CUSTOM_PREDICTIONS:-$(prediction_for_k "$TOP_K")}
     OUTPUT="$OUTPUT_DIR/${METHOD,,}_top${TOP_K}.jsonl"
