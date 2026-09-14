@@ -22,8 +22,8 @@
   ],
   [
     "california_schools#sep#satscores",
-    "california_schools#sep#frpm",
-    "california_schools#sep#schools"
+    "california_schools#sep#schools",
+    "california_schools#sep#frpm"
   ],
   [
     "california_schools#sep#satscores",
@@ -81,8 +81,8 @@
   ],
   [
     "california_schools#sep#satscores",
-    "california_schools#sep#frpm",
-    "california_schools#sep#schools"
+    "california_schools#sep#schools",
+    "california_schools#sep#frpm"
   ],
   [
     "california_schools#sep#satscores",
@@ -439,7 +439,6 @@
   ],
   [
     "financial#sep#disp",
-    "financial#sep#order",
     "financial#sep#client"
   ],
   [
@@ -454,10 +453,9 @@
   ],
   [
     "debit_card_specializing#sep#customers",
-    "financial#sep#trans",
-    "financial#sep#client",
     "financial#sep#account",
-    "financial#sep#district"
+    "financial#sep#district",
+    "financial#sep#trans"
   ],
   [
     "financial#sep#trans",
@@ -641,7 +639,8 @@
   ],
   [
     "financial#sep#card",
-    "financial#sep#disp"
+    "financial#sep#disp",
+    "financial#sep#account"
   ],
   [
     "financial#sep#district",
@@ -659,6 +658,7 @@
   [
     "financial#sep#card",
     "debit_card_specializing#sep#customers",
+    "financial#sep#account",
     "financial#sep#disp"
   ],
   [
@@ -667,8 +667,9 @@
   ],
   [
     "financial#sep#account",
+    "debit_card_specializing#sep#yearmonth",
     "debit_card_specializing#sep#transactions_1k",
-    "financial#sep#trans"
+    "debit_card_specializing#sep#customers"
   ],
   [
     "financial#sep#loan",
@@ -874,8 +875,9 @@
     "financial#sep#disp"
   ],
   [
-    "financial#sep#disp",
-    "financial#sep#client"
+    "financial#sep#client",
+    "financial#sep#account",
+    "financial#sep#disp"
   ],
   [
     "financial#sep#loan",
@@ -1090,8 +1092,9 @@
   ],
   [
     "toxicology#sep#molecule",
+    "toxicology#sep#bond",
     "toxicology#sep#atom",
-    "toxicology#sep#bond"
+    "toxicology#sep#connected"
   ],
   [
     "toxicology#sep#atom",
@@ -1242,7 +1245,8 @@
   ],
   [
     "toxicology#sep#bond",
-    "toxicology#sep#connected"
+    "toxicology#sep#connected",
+    "toxicology#sep#atom"
   ],
   [
     "toxicology#sep#atom",
@@ -1357,8 +1361,8 @@
   [
     "toxicology#sep#bond",
     "toxicology#sep#connected",
-    "toxicology#sep#molecule",
-    "toxicology#sep#atom"
+    "thrombosis_prediction#sep#laboratory",
+    "toxicology#sep#molecule"
   ],
   [
     "toxicology#sep#bond",
@@ -2028,10 +2032,12 @@
   ],
   [
     "card_games#sep#cards",
+    "card_games#sep#foreign_data",
     "card_games#sep#sets"
   ],
   [
     "card_games#sep#cards",
+    "card_games#sep#foreign_data",
     "superhero#sep#superhero"
   ],
   [
@@ -2062,10 +2068,8 @@
     "card_games#sep#sets"
   ],
   [
-    "superhero#sep#hero_power",
     "card_games#sep#cards",
     "card_games#sep#foreign_data",
-    "superhero#sep#superpower",
     "card_games#sep#sets"
   ],
   [
@@ -2093,8 +2097,7 @@
   [
     "card_games#sep#rulings",
     "card_games#sep#cards",
-    "card_games#sep#sets",
-    "card_games#sep#foreign_data"
+    "card_games#sep#sets"
   ],
   [
     "card_games#sep#foreign_data",
@@ -2601,8 +2604,8 @@
     "card_games#sep#rulings"
   ],
   [
-    "card_games#sep#legalities",
     "card_games#sep#cards",
+    "card_games#sep#legalities",
     "card_games#sep#foreign_data",
     "card_games#sep#sets"
   ],
@@ -2781,7 +2784,8 @@
   ],
   [
     "codebase_community#sep#posts",
-    "codebase_community#sep#users"
+    "codebase_community#sep#users",
+    "codebase_community#sep#posthistory"
   ],
   [
     "codebase_community#sep#votes",
@@ -3105,8 +3109,8 @@
   ],
   [
     "codebase_community#sep#tags",
-    "codebase_community#sep#posts",
-    "codebase_community#sep#posthistory"
+    "codebase_community#sep#postlinks",
+    "codebase_community#sep#posts"
   ],
   [
     "codebase_community#sep#posts",
@@ -3151,7 +3155,10 @@
   ],
   [
     "codebase_community#sep#posts",
-    "codebase_community#sep#posthistory"
+    "codebase_community#sep#postlinks",
+    "codebase_community#sep#posthistory",
+    "codebase_community#sep#votes",
+    "codebase_community#sep#tags"
   ],
   [
     "codebase_community#sep#badges",
@@ -3256,8 +3263,8 @@
     "codebase_community#sep#badges"
   ],
   [
-    "codebase_community#sep#posts",
-    "codebase_community#sep#votes"
+    "codebase_community#sep#tags",
+    "codebase_community#sep#posts"
   ],
   [
     "codebase_community#sep#postlinks",
@@ -3554,16 +3561,17 @@
   ],
   [
     "superhero#sep#superhero",
-    "superhero#sep#colour"
+    "superhero#sep#hero_power",
+    "superhero#sep#superpower"
   ],
   [
     "superhero#sep#superhero",
     "superhero#sep#hero_power"
   ],
   [
-    "superhero#sep#superpower",
+    "superhero#sep#superhero",
     "superhero#sep#hero_power",
-    "superhero#sep#superhero"
+    "superhero#sep#superpower"
   ],
   [
     "superhero#sep#superhero",
@@ -3598,9 +3606,10 @@
   ],
   [
     "superhero#sep#superhero",
-    "superhero#sep#attribute",
     "superhero#sep#hero_attribute",
-    "superhero#sep#hero_power"
+    "superhero#sep#hero_power",
+    "superhero#sep#attribute",
+    "superhero#sep#superpower"
   ],
   [
     "superhero#sep#superhero",
@@ -4119,14 +4128,13 @@
   [
     "formula_1#sep#drivers",
     "formula_1#sep#qualifying",
-    "formula_1#sep#results"
+    "formula_1#sep#results",
+    "formula_1#sep#races"
   ],
   [
-    "formula_1#sep#qualifying",
-    "formula_1#sep#drivers",
     "formula_1#sep#laptimes",
-    "formula_1#sep#races",
-    "formula_1#sep#results"
+    "formula_1#sep#drivers",
+    "formula_1#sep#races"
   ],
   [
     "formula_1#sep#races",
@@ -4281,7 +4289,8 @@
     "formula_1#sep#results"
   ],
   [
-    "formula_1#sep#results"
+    "formula_1#sep#results",
+    "formula_1#sep#races"
   ],
   [
     "formula_1#sep#driverstandings",
@@ -4321,8 +4330,7 @@
   ],
   [
     "formula_1#sep#races",
-    "formula_1#sep#seasons",
-    "superhero#sep#race",
+    "formula_1#sep#pitstops",
     "formula_1#sep#results"
   ],
   [
@@ -4376,9 +4384,10 @@
   ],
   [
     "formula_1#sep#races",
-    "formula_1#sep#laptimes",
+    "formula_1#sep#results",
     "formula_1#sep#circuits",
-    "formula_1#sep#results"
+    "formula_1#sep#laptimes",
+    "formula_1#sep#qualifying"
   ],
   [
     "formula_1#sep#circuits",
@@ -4543,8 +4552,8 @@
   ],
   [
     "formula_1#sep#drivers",
-    "formula_1#sep#qualifying",
     "formula_1#sep#races",
+    "formula_1#sep#qualifying",
     "formula_1#sep#driverstandings"
   ],
   [
@@ -4571,7 +4580,8 @@
   [
     "formula_1#sep#drivers",
     "formula_1#sep#qualifying",
-    "formula_1#sep#results"
+    "formula_1#sep#races",
+    "formula_1#sep#driverstandings"
   ],
   [
     "formula_1#sep#drivers",
@@ -4592,7 +4602,8 @@
   [
     "formula_1#sep#qualifying",
     "formula_1#sep#results",
-    "formula_1#sep#races"
+    "formula_1#sep#races",
+    "formula_1#sep#drivers"
   ],
   [
     "formula_1#sep#races",
@@ -4602,7 +4613,6 @@
   [
     "formula_1#sep#drivers",
     "formula_1#sep#races",
-    "formula_1#sep#qualifying",
     "formula_1#sep#driverstandings"
   ],
   [
@@ -4652,8 +4662,8 @@
   ],
   [
     "formula_1#sep#constructorstandings",
-    "formula_1#sep#constructorresults",
-    "formula_1#sep#constructors"
+    "formula_1#sep#constructors",
+    "formula_1#sep#constructorresults"
   ],
   [
     "formula_1#sep#constructorresults",
@@ -4757,8 +4767,7 @@
   ],
   [
     "formula_1#sep#drivers",
-    "formula_1#sep#races",
-    "formula_1#sep#driverstandings"
+    "formula_1#sep#results"
   ],
   [
     "formula_1#sep#drivers",
@@ -4823,12 +4832,13 @@
   [
     "formula_1#sep#qualifying",
     "formula_1#sep#races",
-    "formula_1#sep#results"
+    "formula_1#sep#driverstandings"
   ],
   [
-    "formula_1#sep#driverstandings",
-    "formula_1#sep#pitstops",
-    "formula_1#sep#drivers"
+    "formula_1#sep#qualifying",
+    "formula_1#sep#results",
+    "formula_1#sep#drivers",
+    "formula_1#sep#driverstandings"
   ],
   [
     "formula_1#sep#constructorstandings",
@@ -4860,8 +4870,7 @@
   [
     "formula_1#sep#drivers",
     "formula_1#sep#pitstops",
-    "formula_1#sep#results",
-    "formula_1#sep#qualifying"
+    "formula_1#sep#results"
   ],
   [
     "formula_1#sep#races",
@@ -6013,66 +6022,67 @@
   ],
   [
     "thrombosis_prediction#sep#laboratory",
+    "thrombosis_prediction#sep#examination",
+    "thrombosis_prediction#sep#patient"
+  ],
+  [
+    "thrombosis_prediction#sep#laboratory",
+    "thrombosis_prediction#sep#patient"
+  ],
+  [
+    "thrombosis_prediction#sep#laboratory",
+    "thrombosis_prediction#sep#patient"
+  ],
+  [
+    "thrombosis_prediction#sep#laboratory",
+    "thrombosis_prediction#sep#patient"
+  ],
+  [
     "thrombosis_prediction#sep#patient",
+    "thrombosis_prediction#sep#examination",
+    "thrombosis_prediction#sep#laboratory"
+  ],
+  [
+    "thrombosis_prediction#sep#laboratory",
+    "thrombosis_prediction#sep#patient"
+  ],
+  [
+    "thrombosis_prediction#sep#laboratory",
+    "thrombosis_prediction#sep#examination",
+    "thrombosis_prediction#sep#patient"
+  ],
+  [
+    "thrombosis_prediction#sep#examination",
+    "thrombosis_prediction#sep#patient",
+    "thrombosis_prediction#sep#laboratory"
+  ],
+  [
+    "thrombosis_prediction#sep#laboratory",
+    "thrombosis_prediction#sep#patient"
+  ],
+  [
+    "thrombosis_prediction#sep#examination",
+    "thrombosis_prediction#sep#patient",
+    "thrombosis_prediction#sep#laboratory"
+  ],
+  [
+    "thrombosis_prediction#sep#patient",
+    "thrombosis_prediction#sep#laboratory"
+  ],
+  [
+    "thrombosis_prediction#sep#patient",
+    "thrombosis_prediction#sep#laboratory"
+  ],
+  [
+    "thrombosis_prediction#sep#laboratory",
+    "thrombosis_prediction#sep#patient"
+  ],
+  [
+    "thrombosis_prediction#sep#patient",
+    "thrombosis_prediction#sep#laboratory",
     "thrombosis_prediction#sep#examination"
   ],
   [
-    "thrombosis_prediction#sep#laboratory",
-    "thrombosis_prediction#sep#patient"
-  ],
-  [
-    "thrombosis_prediction#sep#laboratory",
-    "thrombosis_prediction#sep#patient"
-  ],
-  [
-    "thrombosis_prediction#sep#laboratory",
-    "thrombosis_prediction#sep#patient"
-  ],
-  [
-    "thrombosis_prediction#sep#patient",
-    "thrombosis_prediction#sep#examination",
-    "thrombosis_prediction#sep#laboratory"
-  ],
-  [
-    "thrombosis_prediction#sep#laboratory",
-    "thrombosis_prediction#sep#patient"
-  ],
-  [
-    "thrombosis_prediction#sep#laboratory",
-    "thrombosis_prediction#sep#examination",
-    "thrombosis_prediction#sep#patient"
-  ],
-  [
-    "thrombosis_prediction#sep#examination",
-    "thrombosis_prediction#sep#patient",
-    "thrombosis_prediction#sep#laboratory"
-  ],
-  [
-    "thrombosis_prediction#sep#laboratory",
-    "thrombosis_prediction#sep#patient"
-  ],
-  [
-    "thrombosis_prediction#sep#examination",
-    "thrombosis_prediction#sep#patient",
-    "thrombosis_prediction#sep#laboratory"
-  ],
-  [
-    "thrombosis_prediction#sep#patient",
-    "thrombosis_prediction#sep#laboratory"
-  ],
-  [
-    "thrombosis_prediction#sep#laboratory",
-    "thrombosis_prediction#sep#patient"
-  ],
-  [
-    "thrombosis_prediction#sep#laboratory",
-    "thrombosis_prediction#sep#patient"
-  ],
-  [
-    "thrombosis_prediction#sep#patient",
-    "thrombosis_prediction#sep#laboratory"
-  ],
-  [
     "thrombosis_prediction#sep#patient",
     "thrombosis_prediction#sep#laboratory"
   ],
@@ -6118,13 +6128,13 @@
     "thrombosis_prediction#sep#patient"
   ],
   [
+    "thrombosis_prediction#sep#patient",
     "thrombosis_prediction#sep#examination",
-    "thrombosis_prediction#sep#laboratory",
-    "thrombosis_prediction#sep#patient"
+    "superhero#sep#gender",
+    "thrombosis_prediction#sep#laboratory"
   ],
   [
     "thrombosis_prediction#sep#patient",
-    "thrombosis_prediction#sep#examination",
     "thrombosis_prediction#sep#laboratory"
   ],
   [
@@ -6498,7 +6508,8 @@
   ],
   [
     "student_club#sep#member",
-    "student_club#sep#major"
+    "student_club#sep#major",
+    "student_club#sep#attendance"
   ],
   [
     "student_club#sep#member",
@@ -6805,7 +6816,8 @@
     "student_club#sep#member"
   ],
   [
-    "student_club#sep#member"
+    "student_club#sep#member",
+    "student_club#sep#major"
   ],
   [
     "student_club#sep#event",
@@ -6951,8 +6963,7 @@
   ],
   [
     "student_club#sep#budget",
-    "student_club#sep#event",
-    "student_club#sep#expense"
+    "student_club#sep#event"
   ],
   [
     "student_club#sep#budget",
@@ -7016,7 +7027,7 @@
   ],
   [
     "student_club#sep#zip_code",
-    "california_schools#sep#schools"
+    "financial#sep#district"
   ],
   [
     "student_club#sep#zip_code",
@@ -7231,9 +7242,11 @@
     "debit_card_specializing#sep#yearmonth"
   ],
   [
-    "debit_card_specializing#sep#transactions_1k",
+    "financial#sep#trans",
+    "debit_card_specializing#sep#customers",
+    "financial#sep#order",
     "financial#sep#account",
-    "financial#sep#trans"
+    "debit_card_specializing#sep#transactions_1k"
   ],
   [
     "debit_card_specializing#sep#customers",
