@@ -5,7 +5,7 @@ SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 PROJECT_ROOT=$(cd -- "$SCRIPT_DIR/.." && pwd)
 
 if [[ $# -lt 3 ]]; then
-    echo "Usage: $0 MODEL METHOD DATASET [--dry-run] [--top-k {5,10,15}]" >&2
+    echo "Usage: $0 MODEL METHOD DATASET [--dry-run] [--top-k {5,10,15}] [--predictions PATH]" >&2
     exit 2
 fi
 

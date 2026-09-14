@@ -6,6 +6,7 @@ PROJECT_ROOT=$(cd -- "$SCRIPT_DIR/../.." && pwd)
 MODEL=$1
 DATASET=$2
 MODE=
+CUSTOM_PREDICTIONS=
 TOP_K_VALUES=(5 10 15)
 shift 2
 while [[ $# -gt 0 ]]; do
@@ -20,6 +21,14 @@ while [[ $# -gt 0 ]]; do
                 exit 2
             fi
             TOP_K_VALUES=("$2")
+            shift 2
+            ;;
+        --predictions)
+            if [[ $# -lt 2 ]]; then
+                echo "--predictions requires a file path" >&2
+                exit 2
+            fi
+            CUSTOM_PREDICTIONS=$2
             shift 2
             ;;
         *)
@@ -49,7 +58,7 @@ fi
 mkdir -p "$PROJECT_ROOT/logs" "$OUTPUT_DIR"
 
 for TOP_K in "${TOP_K_VALUES[@]}"; do
-    PREDICTIONS=$(prediction_for_k "$TOP_K")
+    PREDICTIONS=${CUSTOM_PREDICTIONS:-$(prediction_for_k "$TOP_K")}
     OUTPUT="$OUTPUT_DIR/${METHOD,,}_top${TOP_K}.jsonl"
 
     "$CONDA_BIN" run -n text2sql_llm \
