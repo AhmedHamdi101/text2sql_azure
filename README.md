@@ -99,7 +99,9 @@ data/
 └── core-t/<dataset>/k_15.json
 ```
 
-The `datasets` directory contains the questions and complete schemas used by SQL generation. The Ours files are the selected experiment outputs. IterJAR, CORE-T, and QGpT use the paper-reported prediction files.
+The `datasets` directory contains the questions and complete schemas used by SQL generation. The Ours files are the selected experiment outputs. IterJAR and QGpT use the paper-reported prediction files. CORE-T uses final `augmented_tables.json` outputs from `core-t/results-paper-reported`, copied to `data/core-t/<dataset>/k_<K>.json`. K identifies the retrieval run; the loader retains the full augmented set. Source paths, hashes, and selector backups are recorded in `data/core-t/augmentation_manifest.json`.
+
+The current BIRD SQL-generation dataset differs in question text from the CoRe-T source data at 109 row positions. This pre-existing dataset-version mismatch is recorded in the manifest and should be resolved before claiming a faithful BIRD reproduction.
 
 ## Environment setup
 
@@ -351,6 +353,7 @@ The logic in `prediction_utils.py` mirrors the shared metrics evaluation:
 - After selecting one database, only predicted tables belonging to that database are used for SQL generation.
 - Duplicate final table IDs are removed while preserving their first occurrence.
 - CORE-T duplicates remain present during database voting, matching its metric loader, and are removed from the final SQL schema afterward.
+- CORE-T votes over the full augmented set without truncating it to K.
 
 The generator never uses the gold database to choose the prompt schema.
 

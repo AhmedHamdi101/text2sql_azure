@@ -1,0 +1,21 @@
+Beaver-NW table-retrieval and schema-pruning predictions.
+
+Source run:
+/export/bayan_Text2SQL/vd_experiment/prunning_results/results/beaver_nw/schema-purpose_random-walk_cols/10000/specific-pruning-script/topq50_topdb1_tableks5-10-15_job393592__specific-pruning-script/
+
+Configuration:
+- min_keep: 3
+- protect_top_n: 2
+- relative_support_threshold: 0.25
+- top_hit_bonus: 0.15
+- top_hit_window: 5
+- lexical_keep: true
+- retrieval: top 50 synthetic questions, top 1 database
+- table cutoffs: K = 5, 10, and 15
+
+This is the lower-threshold (0.25) Beaver-NW table selection. It retains more
+candidate tables than a 0.35-threshold alternative. The JSON contains 88
+development examples, each with the question, ground-truth database/tables,
+predicted database, predicted tables at K=5/10/15, pruning decisions, support
+scores, and inference time. It does not contain generated SQL queries or SQL
+execution results.
